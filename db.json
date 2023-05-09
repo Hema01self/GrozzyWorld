@@ -90,16 +90,13 @@
   ],
   "products": [
     {
-      "id": 1,
       "name": "Tomato",
-      "price": 15,
-      "quantity": 1,
-      "disabled": false,
+      "price": "17",
+      "category": "veg",
+      "quantity": "1",
+      "description": "about the product",
       "image": "assets/images/tomatoes.jpg",
-      "detail": "about the product",
-      "weight": "1kg",
-      "rating": 5,
-      "category": "veg"
+      "id": 1
     },
     {
       "id": 2,
