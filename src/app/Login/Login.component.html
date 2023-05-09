@@ -1,0 +1,166 @@
+<app-Header></app-Header>
+<div class="section">
+  <div class="loginbox">
+    <div class="wrapper">
+      <div class="login-header">Login</div>
+      <form class="form" #loginForm="ngForm" (ngSubmit)="onLogin()">
+
+        <div class="form-control">
+          <input type="email" placeholder="Enter email" name="emailid" #email=ngModel [(ngModel)]="emailid" required="" pattern="^(([^<>()\[\]\\.,;:\s@']+(\.[^<>()\[\]\\.,;:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$">
+          <div *ngIf="email.errors && (email.dirty || email.touched)">
+
+            <small [hidden]="!email.errors['required']">Please enter email id</small>
+             <small [hidden]="!email.errors['pattern']">Please enter valid email id</small>
+          </div>
+           <!-- <i class="fas fa-check-circle"></i>
+          <i class="fas fa-times-circle"></i>-->
+          <!-- <small>Error message</small>-->
+        </div>
+
+        <div class="form-control">
+          <input type="password" placeholder="Enter password" name="password" #pword="ngModel" [(ngModel)]="password"
+            required="" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$">
+          <div *ngIf="pword.errors && (pword.dirty || pword.touched)">
+            <small [hidden]="!pword.errors['required']">Please enter Password</small>
+            <small [hidden]="!pword.errors['pattern']">length should be 8</small>
+
+          </div>
+          <!-- <i class="fas fa-check-circle"></i>
+        <i class="fas fa-times-circle"></i>-->
+        </div>
+
+        <input type="Submit" [disabled]="!loginForm.form.valid" value="Login" style="
+          background: linear-gradient(270deg, #ED765E 0%, #E3BDE5 100%);
+          border-radius: 15px;
+          color: #000;
+          font-size: 1rem;
+          padding: 10px;
+          margin-top: 20px;
+          width: 100%;
+        " />
+        <div class="forgot">Forgot Password</div>
+         </form>
+    </div>
+    <div class="signup">If you are a new user <a routerLink="/register"> Register</a> Here</div>
+
+  </div>
+</div>
+<!--
+<ul>
+<li *ngIf="!isLoggedIn"><a routerLink="/login">Login</a></li>
+<li *ngIf="isLoggedIn"><button (click)="logout()">Logout</button></li>
+
+</ul>
+{{errorMessage}}
+-->
+<!--
+    login(username: string, password: string) {
+    return this.http.get<any[]>('http://localhost:3000/users').pipe(
+      tap((users) => {
+        const user = users.find((u) => u.email === username && u.pword === password);
+
+        if (user) {
+          this.loggedIn=true;
+         console.log(user.email);
+          console.log(user.pword);
+          console.log("credentials are match");
+          console.log('login status '+this.loggedIn);
+        }
+
+        else {
+          this.loggedIn=false;
+          console.log(user.email);
+          console.log(user.pword);
+          console.log("credentials are not match");
+          console.log('login status ' +this.loggedIn);
+          alert('false');
+        }
+      })
+    );
+  }
+ -->
+ <!-- import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
+import { User } from '../User';
+import { HttpClient } from '@angular/common/http';
+import { UserService } from '../user.service';
+
+@Component({
+  selector: 'app-Login',
+  templateUrl: './Login.component.html',
+  styleUrls: ['./Login.component.css'],
+})
+export class LoginComponent {
+  emailid: any = '';
+  password: any = '';
+  isLoggedIn = false;
+  errorMessage!: string;
+  constructor(
+    private authService: AuthService,
+    private http: HttpClient,
+    private route: Router,
+    private userService:UserService
+  ) {}
+  login() {
+    this.http.get<any>('http://localhost:3000/users').subscribe((users) => {
+      const user = users.find(
+        (u: any) => u.email === this.emailid && u.pword === this.password
+      );
+
+      console.log(this.emailid);
+      console.log(this.password);
+      console.log(this.isLoggedIn);
+      if (user) {
+        this.isLoggedIn = true;
+        this.userService.userLogin=this.isLoggedIn;
+        alert('login Suceessfully');
+
+        // this.route.navigate(['/home']);
+      } else {
+        alert('Check your credentials');
+      }
+    });
+  }
+  logout(): void {
+
+        this.isLoggedIn = false;
+        this.userService.userLogin=this.isLoggedIn;
+        console.log(this.isLoggedIn);
+
+  }
+  loginstatus(){
+    console.log(this.isLoggedIn);
+  }
+
+  onLogin():void{
+    this.authService.login(this.emailid,this.password).subscribe(
+      result => {
+        if(result){
+          this.route.navigate(['\home']);
+          alert('Logged In Successfully');
+          console.log(this.emailid);
+          console.log(this.password);
+          console.log('login.ts matched')
+        }
+        else{
+          // this.errorMessage='invalid uname or pword';
+          // console.log('invalid');
+          // alert('invalid');
+        }
+
+
+      },
+      (error)=>{
+        console.log(error);
+        this.errorMessage='An error occurred while logging';
+        alert('Credentials are mismatch')
+      }
+    );
+  }
+
+
+
+}-->
+
+<app-Footer></app-Footer>

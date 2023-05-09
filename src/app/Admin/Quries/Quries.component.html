@@ -1,0 +1,41 @@
+<app-AdminHome></app-AdminHome>
+<div id="main">
+  <div class="top-nav">
+    <div class="top-page">
+      <span style="font-size:25px;cursor:pointer; color:grey;" class="nav">☰ Queries</span>
+    </div>
+    <div class="profile">
+      <img src="assets/images/women1.jpg" class="pro-img" />
+      <p>Hemaltha<span>Admin</span></p>
+    </div>
+  </div>
+  <!-- content -->
+  <div class="total-box">
+    <img src="assets/images/question.png" width="40px" height="40px" class="nav-img" />
+    <p>Total Queries<span> {{queries.length}}</span></p>
+  </div>
+  <div class="table-query">
+    <table class="w-full">
+      <thead>
+        <tr>
+          <td>S.No</td>
+          <td>Name</td>
+          <td>Mobile No</td>
+          <td>Mail id</td>
+          <td>Subject</td>
+          <td>Message</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let query of queries; let x=index">
+          <td>{{x+1}}</td>
+          <td>{{query.uname}}</td>
+          <td>{{query.mobileno}}</td>
+          <td>{{query.emailid}}</td>
+          <td>{{query.sub}}</td>
+          <td>{{query.msg}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

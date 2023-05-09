@@ -1,0 +1,74 @@
+
+footer {
+  background: white;
+  padding-bottom: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin: 0px 50px 50px 50px;
+  font-family: "Poppins", sans-serif;
+}
+footer .box-container {
+  border: 0px solid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  column-gap: 15px;
+  padding: 15px;
+}
+footer .box-container .box h3 {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.715);
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 10px;
+}
+footer .box-container .box {
+  padding-left: 20px;
+}
+footer .box-container .box i {
+  color: #1fd81f;
+  padding-right: 10px;
+}
+footer .box-container .box .links {
+  display: block;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.715);
+  padding: 5px;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+footer .box-container .box .links:hover i {
+  padding-right: 20px;
+  color: #dd5e89;
+}
+footer .box-container .box p {
+  line-height: 25px;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.715);
+  padding: 5px;
+}
+
+footer .box-container .box .share a {
+  padding: 13px;
+  margin: 12px;
+  font-size: 28px;
+  color: #dd5e89;
+  border-radius: 50%;
+  background-color: rgb(128, 128, 128, 0.5);
+}
+footer .box-container .box .share a:hover {
+  color: black;
+  /* box-shadow: 1px 2px 3px 4px rgba(12,12,12,0.2); */
+  background-color: #dd5e89;
+}
+footer .box-container .box .email {
+  padding: 10px;
+  border-radius: 5px;
+  border-color: #eee;
+}
+footer .box-container .box .button {
+  padding: 10px;
+  border-radius: 5px;
+  border-color: #eee;
+}
+.box img {
+  width: 300px;
+}

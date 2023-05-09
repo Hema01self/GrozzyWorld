@@ -1,0 +1,38 @@
+table{
+  border-collapse: collapse;
+  width:100%;
+  border: #e0e0e0 2px solid;
+}
+thead{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #e0e0e0;
+  height: 50px;
+  border:#989595 1px solid
+}
+tbody tr{
+  height: 70px;
+  font-size: 17px;
+  border-bottom:#e0e0e0 2px solid;
+  background-color:rgb(224, 224, 224,0.5);
+  text-align: center;
+  color: #575555;
+}
+.table-query{
+  padding: 35px 35px 140px;
+}
+.total-box{
+  margin-left: 35px;
+  height: 100px;
+  width: 200px;
+  background-color: rgba(71, 141, 137, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+}
+.total-box p{
+  font-size: 20px;
+}
+.total-box p span{
+  color: white;
+}

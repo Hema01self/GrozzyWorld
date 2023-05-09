@@ -1,0 +1,351 @@
+{
+  "admin": [
+    {
+      "name": "Hemalatha",
+      "email": "hemalatha@gmail.com",
+      "pword": "Hemalatha@123"
+    }
+  ],
+  "users": [
+    {
+      "uname": "hema",
+      "email": "hemalathanarayanan01@gmail.com",
+      "phoneno": "9360806740",
+      "add": "kulasekara alwar st",
+      "pcode": "636001",
+      "pword": "Hema@123",
+      "cword": "Hema@123",
+      "id": 1
+    },
+    {
+      "uname": "Abi",
+      "email": "abinayasril@gmail.com",
+      "phoneno": "8220415334",
+      "add": "19/68",
+      "pcode": "636001",
+      "pword": "Abil@123",
+      "cword": "Abil@123",
+      "id": 2
+    },
+    {
+      "uname": "Kirthi",
+      "email": "kirthinarayanan01@gmail.com",
+      "phoneno": "8870743694",
+      "add": "Salem",
+      "pcode": "636001",
+      "pword": "Kirthi@01",
+      "cword": "Kirthi@01",
+      "id": 3
+    },
+    {
+      "uname": "Priya",
+      "email": "priya@gmail.com",
+      "phoneno": "8220415334",
+      "pword": "Priya@123",
+      "cword": "Priya@123",
+      "id": 4
+    },
+    {
+      "uname": "Arya",
+      "email": "arya@gmail.com",
+      "phoneno": "9876553224",
+      "pword": "Arya@123",
+      "cword": "Arya@123",
+      "id": 5
+    }
+  ],
+  "contact-info": [
+    {
+      "uname": "Hema",
+      "mobileno": "9344884610",
+      "emailid": "hemalathanarayanan01@gmail.com",
+      "sub": "Contact",
+      "msg": "How to reach admin",
+      "id": 1
+    },
+    {
+      "uname": "Abi",
+      "mobileno": "9345676740",
+      "emailid": "abi@gmail.com",
+      "sub": "request",
+      "msg": "helloo..",
+      "id": 2
+    },
+    {
+      "uname": "Sudha",
+      "mobileno": "9876541379",
+      "emailid": "Sudha@gmail.com",
+      "sub": "Delivery",
+      "msg": "Where is my order\n\n",
+      "id": 3
+    },
+    {
+      "uname": "Chan",
+      "mobileno": "9345676740",
+      "emailid": "chanu01@gmail.com",
+      "sub": "Review",
+      "msg": "Product quality is good",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Tomato",
+      "price": 15,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/tomatoes.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "veg"
+    },
+    {
+      "id": 2,
+      "name": "Cauliflower",
+      "price": 25,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/image1.webp",
+      "detail": "about the product",
+      "weight": "500g (1pc)",
+      "rating": 4.8,
+      "category": "veg"
+    },
+    {
+      "id": 3,
+      "name": "Potato",
+      "price": 20,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/slide2.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "veg"
+    },
+    {
+      "name": "Raddish",
+      "price": "25",
+      "category": "veg",
+      "quantity": "1",
+      "description": "about the product",
+      "image": "assets/images/image2.jpg",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "Onion",
+      "price": 30,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/image5.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "veg"
+    },
+    {
+      "id": 6,
+      "name": "Lady's Finger",
+      "price": 53,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/slide3.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "veg"
+    },
+    {
+      "name": "Carrot",
+      "price": "35",
+      "category": "veg",
+      "quantity": "1",
+      "description": "about the product is carrot",
+      "image": "assets/images/slide5.jpg",
+      "id": 7
+    },
+    {
+      "id": 8,
+      "name": "Brinjal",
+      "price": 50,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/Brinjal.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "veg"
+    },
+    {
+      "id": 9,
+      "name": "Kiwi",
+      "price": 80,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/fresh-kiwi-fruit-isolated.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "fruit"
+    },
+    {
+      "id": 10,
+      "name": "Strawberry",
+      "price": 76,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/strawberry-berry-levitating-white-background.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "fruit"
+    },
+    {
+      "id": 11,
+      "name": "Papaya",
+      "price": 37,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/papaya-fruit-isolated.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "fruit"
+    },
+    {
+      "id": 12,
+      "name": "Pomegranate",
+      "price": 85,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/exotic-delicious-pomegranate-white-background.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "fruit"
+    },
+    {
+      "id": 13,
+      "name": "Orange",
+      "price": 48,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/fresh-orange-isolated-white-back.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "fruit"
+    },
+    {
+      "id": 14,
+      "name": "Blueberry",
+      "price": 89,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/slide7.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "fruit"
+    },
+    {
+      "id": 15,
+      "name": "Paneer",
+      "price": 65,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/panner - Copy.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "Dairy"
+    },
+    {
+      "id": 16,
+      "name": "Milk",
+      "price": 35,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/fresh-milk-mug-jug-wooden-table.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "Dairy"
+    },
+    {
+      "id": 17,
+      "name": "Cheese",
+      "price": 70,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/cheddar-cheese-dark-wooden-surface.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "Dairy"
+    },
+    {
+      "id": 18,
+      "name": "Ghee",
+      "price": 70,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/ghee.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "Dairy"
+    },
+    {
+      "id": 19,
+      "name": "Rice",
+      "price": 70,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/rice.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "grains"
+    },
+    {
+      "id": 20,
+      "name": "Atta",
+      "price": 471,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/wheat.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "grains"
+    },
+    {
+      "id": 21,
+      "name": "Peanut",
+      "price": 150,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/peanut.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "grains"
+    },
+    {
+      "id": 22,
+      "name": "Urad dal",
+      "price": 136,
+      "quantity": 1,
+      "disabled": false,
+      "image": "assets/images/urad-dal.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "grains"
+    }
+  ]
+}

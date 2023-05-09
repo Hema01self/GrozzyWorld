@@ -1,0 +1,141 @@
+.section{
+  margin:0px 50px 0px 50px;
+  background-color: rgb(255, 255, 255, 0.8);
+  font-family: 'Poppins', sans-serif;
+padding-bottom: 10px;
+}
+.grid{
+  display:grid;
+}
+.grid-three-columns{
+  grid-template-columns:repeat(4,1fr);
+  padding-left: 100px;
+
+}
+.main-box{
+  padding-bottom: 40px;
+
+}
+.product-name{
+  text-align: center;
+}
+.quantity-input {
+  display: inline-block;
+
+
+}
+.quantity-input input[type="number"] {
+  width: 50px;
+  height: 30px;
+  border: 2px solid #a3d7d1;
+  border-radius: 5px;
+  margin: 10px ;
+  color:brown;
+  font-size: 16px;
+  padding-left: 10px;
+}
+.quantity-input input[type="number"]:focus{
+  border: 2px solid #9258a1;
+}
+.grid-two-columns{
+display: flex;
+}
+.add-to-cart-button{
+  color: white;
+    background-color: #56CCF2;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+
+  font-weight: bold;
+}
+.add-to-cart-button:hover{
+  background-color: #2D9CDB;
+}
+.product-image{
+
+  transition: 0.3s ease-in-out;
+}
+.product-image:hover{
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+.cart-icon-container{
+  float: right;
+  padding: 20px 20px 0 0;
+}
+.cart-icon {
+  position: relative;
+  display: inline-block;
+
+}
+.cart-icon i {
+  font-size: 2rem;
+  color: #000000;
+}
+
+.cart-icon .badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #FF0000;
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 4px;
+  border-radius: 50%;
+}
+.price{
+  padding-top: 2px;
+  color: #333;
+}
+.category{
+  text-align: center;
+  padding-top: 30px;
+}
+.cat-button{
+  display: inline;
+  padding: 20px;
+}
+.category-button{
+  padding:10px;
+  font-size: 15px;
+  font-weight: bold;
+  background: #0085ba;
+  color:white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+.style-heading
+{
+
+  background-image: linear-gradient(
+    -225deg,
+    #7456df 0%,
+    #68c1e7 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: grey;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+
+      font-size: 30px;
+      border: none;
+cursor: pointer;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.style-heading:hover{
+  box-shadow: 1px 2px 3px 4px rgba(12,12,12,0.2);
+  border-radius: 5px;
+}

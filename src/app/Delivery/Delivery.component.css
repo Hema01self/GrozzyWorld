@@ -1,0 +1,90 @@
+.container{
+  display: flex;
+}
+.left-cont,.right-cont{
+  width:50%;
+  margin:15px;
+
+}
+
+.delivery-form{
+  background-color: rgb(232, 229, 223);
+  padding: 15px;
+
+}
+.fa-map-marker{
+  padding-right: 5px;
+  color:#0085ba;
+}
+
+.grid{
+  display: flex;
+}
+.input-width input[type='text']{
+width: 420px;
+
+}
+.fields{
+padding: 10px;
+}
+.grid-three-columns input
+{
+width: 186px;
+
+}
+.grid-two-column{
+  width:292px;
+
+}
+input{
+  border: none;
+  padding: 5px;
+}
+label{
+  font-size: 15px;
+}
+.delivery-button{
+  color:white;
+  background-color: #0085ba;
+  padding: 5px;
+  border: none;
+}
+/* .delivery-button:hover{
+  color:#0085ba;
+  background-color: white;
+} */
+.delivery-button-position
+{
+  padding: 10px;
+}
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+table, td, th {
+  padding: 8px;
+  text-align: left;
+
+  color:black;
+}
+.end-border{
+  border-bottom: 1px solid black;
+}
+.cart-table{
+  background-color: rgb(232, 229, 223);
+
+  padding: 10px;
+}
+
+.payment-right
+{
+  background-color: rgb(232, 229, 223);
+padding-left: 15px;
+padding-top: 15px;}
+.payment-field{
+  padding: 5px;
+}
+.payment-field input{
+  width: 420px;
+
+  }

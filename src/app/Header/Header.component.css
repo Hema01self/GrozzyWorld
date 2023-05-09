@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+header {
+  margin: 50px 50px 0px 50px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  background: white;
+  display: flex;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  font-family: "Poppins", sans-serif;
+}
+header .logo {
+  margin-right: auto;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  position: relative;
+  float: left;
+}
+
+header nav ul li:hover ul {
+  display: block;
+}
+header nav li a {
+  font-size: 20px;
+  color: black;
+  padding: 20px;
+  display: block;
+
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.3),
+      rgba(40, 224, 234, 0.3)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 5px, 0 3px; /* size of the line */
+  background-position: 100% 100%, 0 100%; /* position of the line */
+  background-repeat: no-repeat; /* for the size only visible single line */
+  transition: background-size 400ms;
+}
+
+header nav li a:hover {
+  background-size: 0 3px,50% 3px;
+}
+header nav ul li ul {
+  position: absolute;
+  left: 0;
+
+  background: #fff;
+  display: none;
+}
+header nav ul li {
+  padding-top: 20px;
+}
+header nav ul li ul li {
+  width: 100%;
+ padding: 0px;
+}
+.fa-shopping-cart {
+  font-size: 2rem;
+  color: #000000;
+  margin-top: 15px;
+  }
+   .badge {
+    position: absolute;
+
+  margin-top: 5px;
+    background-color: #FF0000;
+    color: #FFFFFF;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 4px;
+    border-radius: 50%;
+  }

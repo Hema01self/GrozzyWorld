@@ -1,0 +1,84 @@
+.section
+{
+  margin:0px 50px 0px 50px;
+  background-color: rgb(255, 255, 255, 0.8);
+  font-family: 'Poppins', sans-serif;
+}
+.login-header{
+  text-align: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 15px;
+ }
+.loginbox{
+ padding: 90px 0 90px 0;
+}
+.wrapper{
+  background-color: hsl(225, 85%, 8%,0.8);
+ width: 30%;
+  margin: auto;/*the margin automatically fix to width of 30% aat center */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25);
+
+}
+.form{
+
+margin: 0 auto;
+max-width: 16rem;
+overflow: hidden;
+}
+
+.form-control {
+  padding-bottom: 30px;
+
+
+}
+.form-control input {
+  border: 1px solid transparent;
+
+  border-bottom-color: white;
+  background-color: transparent;
+  color: white;
+  border-radius: 0;
+letter-spacing: 2px;
+  font-size: 15px;
+  padding: 8px 0 8px 0;
+ width: 100%;
+
+  }
+  .form-control input:focus{
+    border-bottom-color: #777;
+    outline: 0;
+  }
+  .form-control input.ng-invalid{border-bottom :2px solid red;
+  }
+  .form-control input.ng-valid{border-bottom :2px solid green;
+   }
+
+   .form-control small {
+    color: #e74c3c;
+
+    bottom: 0;
+    left: 0;
+    position:relative;
+    visibility: visible;
+    font-size: 15px;
+}
+
+.forgot
+{
+text-align: center;
+color: white;
+}
+.signup{
+  text-align: center;
+  color: black;
+}
+.signup a{
+  text-decoration: none;
+  color:#000;
+  font-weight: bold;
+}
+

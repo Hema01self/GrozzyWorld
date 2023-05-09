@@ -1,0 +1,131 @@
+<app-AdminHome></app-AdminHome>
+<div id="main">
+  <div class="top-nav">
+    <div class="top-page">
+      <span style="font-size:25px;cursor:pointer; color:grey;" class="nav">☰ Edit Product</span>
+    </div>
+    <div class="profile">
+      <img src="assets/images/women1.jpg" class="pro-img" />
+      <p>Hemaltha<span>Admin</span></p>
+    </div>
+  </div>
+  <div class="edit-product">
+    <h1>Edit Product</h1>
+    <p class="message-p">{{productMessage}}</p>
+    <form #editProduct="ngForm"
+    (ngSubmit)="submit(editProduct.value)"
+     class="common-form">
+
+      <input
+        type="text"
+        class="form-input"
+        placeholder="Enter Product Name"
+        name="name"
+        ngModel="{{productData?.name}}"
+      />
+      <input
+      type="text"
+      class="form-input"
+      placeholder="Enter Product Price"
+      name="price"
+      ngModel="{{productData?.price}}"
+    />
+    <input
+    type="text"
+    class="form-input"
+    placeholder="Enter Product Category"
+    name="category"
+    ngModel="{{productData?.category}}"
+  />
+  <input
+  type="text"
+  class="form-input"
+  placeholder="Enter Product quantity"
+  name="quantity"
+  ngModel="{{productData?.quantity}}"
+  />
+  <textarea
+  type="text"
+  class="form-input"
+  placeholder="Enter Product Description"
+  name="description"
+  ngModel="{{productData?.detail}}"
+  ></textarea>
+
+  <input
+  type="text"
+  class="form-input"
+  placeholder="Enter Product Image URL"
+  name="image"
+  ngModel="{{productData?.image}}"
+  />
+  <button class="form-button">Update Product</button>
+
+    </form>
+  </div>
+  <!-- <form #addProduct="ngForm" (ngSubmit)="submitForm()" class="common-form">
+    <div class="form-field">
+      <input type="tel" placeholder="Enter Id" name="proId" formControlName="proId" [(ngModel)]="proId" required="">
+      <div *ngIf="productForm.controls['proId'].dirty">
+        <small *ngIf="productForm.controls['proId'].errors?.['required']">Please Enter Id</small>
+      </div>
+    </div>
+    <div class="form-field">
+      <input type="text" placeholder="Enter product name" name="proName" formControlName="proName" [(ngModel)]="proName" required="">
+      <div *ngIf="productForm.controls['proName'].dirty">
+        <small *ngIf="productForm.controls['proName'].errors?.['required']">Please Enter product name</small>
+      </div>
+    </div>
+    <div class="form-field">
+      <input type="tel" placeholder="Enter product price" name="proPrice" formControlName="proPrice" [(ngModel)]="proPrice" required="">
+      <div *ngIf="productForm.controls['proPrice'].dirty">
+        <small *ngIf="productForm.controls['proPrice'].errors?.['required']">Please Enter price</small>
+      </div>
+    </div>
+    <div class="form-field">
+      <input type="tel" placeholder="Enter product  quantity" name="proQuantity" formControlName="proQuantity" [(ngModel)]="proQuantity" required="">
+      <div *ngIf="productForm.controls['proQuantity'].dirty">
+        <small *ngIf="productForm.controls['proQuantity'].errors?.['required']">Please Enter quantity</small>
+      </div>
+    </div>
+    <div class="form-field">
+      <input type="text" placeholder="Enter as false" name="proDisable" formControlName="proDisable" [(ngModel)]="proDisable" required="">
+      <div *ngIf="productForm.controls['proDisable'].dirty">
+        <small *ngIf="productForm.controls['proDisable'].errors?.['required']">Please Enter as false</small>
+      </div>
+    </div>
+    <div class="form-field">
+      <input type="text" placeholder="Enter product image url" name="proImage" formControlName="proImage" [(ngModel)]="proImage" required="">
+      <div *ngIf="productForm.controls['proImage'].dirty">
+        <small *ngIf="productForm.controls['proImage'].errors?.['required']">Please Enter image url</small>
+      </div>
+    </div>
+    <div class="form-field">
+      <input type="text" placeholder="Enter product detail" name="proDetail" formControlName="proDetail" [(ngModel)]="proDetail" required="">
+      <div *ngIf="productForm.controls['proDetail'].dirty">
+        <small *ngIf="productForm.controls['proDetail'].errors?.['required']">Please Enter product detail</small>
+      </div>
+    </div>
+    <div class="form-field">
+      <input type="tel" placeholder="Enter product weight" name="proWeight" formControlName="proWeight" [(ngModel)]="proWeight" required="">
+      <div *ngIf="productForm.controls['proWeight'].dirty">
+        <small *ngIf="productForm.controls['proWeight'].errors?.['required']">Please Enter product weight</small>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <input type="text" placeholder="Enter product category" name="proCategory" formControlName="proCategory" [(ngModel)]="proCategory" required="">
+      <div *ngIf="productForm.controls['proCategory'].dirty">
+        <small *ngIf="productForm.controls['proCategory'].errors?.['required']">Please Enter product category</small>
+      </div>
+    </div>
+    <div class="form-field">
+    <input type="submit" value="Update Product" Style="
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: linear-gradient(270deg, #ED765E 0%, #E3BDE5 100%);
+    color: black;
+    "></div>
+  </form>-->
+</div>

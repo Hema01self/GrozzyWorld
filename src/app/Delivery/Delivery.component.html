@@ -1,0 +1,117 @@
+<app-Header></app-Header>
+<div class="section">
+  <div class="container">
+    <div class="left-cont bg-left-content">
+      <div>
+        <h3><i class="fa fa-map-marker"></i>Delivery Address</h3>
+      </div>
+      <form class="delivery-form" #DeliveryForm="ngForm" >
+        <span style="font-weight: bold;padding-left: 9px;">Personal Details</span>
+        <div class="grid grid-three-columns">
+          <div class="fields">
+            <label>Enter first name</label>
+            <div><input type="text" placeholder="Your first name"  name="fname" [(ngModel)]="fname" #firstname="ngModel"></div>
+          </div>
+          <div class="fields">
+            <label>Enter Last name</label>
+            <div><input type="text" placeholder="Your last name" name="lname" [(ngModel)]="lname" #lastname="ngModel"></div>
+          </div>
+          <div class="fields">
+            <label>Enter phone number</label>
+            <div><input type="tel" placeholder="Your Phone number" name="phone" [(ngModel)]="phone" #phoneno="ngModel"></div>
+          </div>
+        </div>
+        <span style="font-weight: bold;padding-left: 9px;">Address Details</span>
+        <div class="grid ">
+
+          <div class="fields" >
+            <label>Enter House Number</label>
+            <span *ngIf="houseNumber.errors && (houseNumber.dirty || houseNumber.untouched)" style="color:red; font-size: 20px;">*</span>
+            <div><input class="single-column" type="text" placeholder="House No" name="houseno" [(ngModel)]="houseno" #houseNumber="ngModel" required="">
+            </div>
+          </div>
+          <div class="fields">
+            <label>Enter Apartment name</label>
+            <div class="input-width"><input type="text" placeholder="Apartment name" name="aparment" [(ngModel)]="aparment" #apartmentNumber="ngModel"></div>
+          </div>
+        </div>
+        <div class="grid ">
+          <div class="fields">
+            <label>Enter Street details</label>
+            <span *ngIf="streetDetail.errors && (streetDetail.dirty || streetDetail.untouched)" style="color:red; font-size: 20px;">*</span>
+            <div class="input-width"><input type="text" placeholder="Street details" name="strdetails" [(ngModel)]="strdetails" #streetDetail="ngModel" required=""></div>
+          </div>
+          <div class="fields">
+
+            <label>Enter any landmark</label>
+            <div><input type="text" placeholder="Any landmark" name="landmark" [(ngModel)]="landmark" #landmarkDetail="ngModel"></div>
+          </div>
+        </div>
+        <div class="grid ">
+
+          <div class="fields">
+            <label>Enter City name</label>
+            <span *ngIf="Cityname.errors && (Cityname.dirty || Cityname.untouched)" style="color:red; font-size: 20px;">*</span>
+            <div><input class="grid-two-column" type="tel" placeholder="Salem" name="city" [(ngModel)]="city" #Cityname="ngModel"  required=""></div>
+          </div>
+          <div class="fields">
+            <label>Enter Pincode</label>
+            <span *ngIf="Pincode.errors && (Pincode.dirty || Pincode.untouched)" style="color:red; font-size: 20px;">*</span>
+            <div><input class="grid-two-column" type="tel" placeholder="Pincode example:636001" name="pcode" [(ngModel)]="pcode" #Pincode="ngModel"  required=""></div>
+          </div>
+
+
+        </div>
+        <div class="delivery-button-position"><button class="delivery-button"[disabled]="!DeliveryForm.form.valid"  >ADD ADDRESS</button></div>
+      </form>
+    </div>
+
+    <div class="right-cont">
+      <div>
+        <h3>Order Summary</h3>
+      </div>
+      <div class="cart-table">
+        <table>
+          <tr>
+            <td>Cart Value</td>
+            <td>{{getGrandTotal()|currency:'INR'}}</td>
+          </tr>
+          <tr class="end-border">
+            <td>Delivery Charge</td>
+            <td style="color: rgb(57, 224, 57);">FREE</td>
+          </tr>
+          <tr class="end-border">
+            <td style="font-weight: bold;">Total amount payable</td>
+            <td style="font-weight: bold;">{{getGrandTotal()|currency:'INR'}}</td>
+          </tr>
+
+        </table>
+      </div>
+        <h3>Payment Option</h3>
+<ng-container *ngIf="DeliveryForm.form.valid">
+      <div class="payment-option">
+
+        <div class="payment-right">
+          <span style="font-weight: bold;padding-left: 9px;margin-top:10px ;">Add Credit/Debit Card</span>
+          <form>
+            <div class = "payment-field"><input type="tel" placeholder="Enter card number"></div>
+            <div  class = "payment-field"><input placeholder="MM/YY"></div>
+            <div class = "payment-field"><input placeholder="CVV"></div>
+            <div class="delivery-button-position"><button class="delivery-button" [disabled]="!DeliveryForm.form.valid" (click)="alert()">PROCEED TO PAY</button></div>
+
+          </form>
+        </div>
+
+      </div>
+    </ng-container >
+    <ng-container *ngIf="!DeliveryForm.form.valid">
+
+<div >
+  <h4 style="color:red">Fill out the fields to proceed payment process</h4>
+  <img src="assets/images/payment.jpg" width="100%" height="150px">
+</div>
+    </ng-container>
+    </div>
+  </div>
+</div>
+<app-Footer></app-Footer>

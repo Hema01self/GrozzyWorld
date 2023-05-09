@@ -1,0 +1,103 @@
+.body{
+  margin:0px 50px 0px 50px;
+  background-color: rgb(255, 255, 255, 0.8);
+  font-family: 'Poppins', sans-serif;
+}
+
+.home-container {
+  display: flex;
+  justify-items: flex-end;
+  justify-content: space-between;
+
+}
+
+.home-left-content{
+  margin: 60px 60px 0px 60px;
+}
+
+#home-cont1 {
+  margin-top: 50px;
+  font-size: 60px;
+  font-weight: bold;
+  color: rgba(25, 2, 94, 0.644);
+}
+#home-cont2 {
+
+  font-size: 55px;
+  font-weight: bold;
+  color: #dd5e89;
+}
+#home-cont3 {
+  font-size: 20px;
+  color: rgba(25, 2, 94, 0.644);
+}
+.button-order {
+  margin: 30px 0 30px 0;
+}
+.button-order input {
+  padding: 5px 30px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: linear-gradient(135deg, hsl(176, 95%, 49%), #1fd81f);
+}
+.section .button-order input:hover {
+  background: linear-gradient(-135deg, #f82189, #e5aabe);
+}
+
+
+.home-flex{
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1.5rem;/*box gap*/
+    padding:0 60px 60px 60px;
+
+}
+
+.home-flex1 {
+  text-align: center;
+  margin: 10px;
+  --borderWidth: 5px;
+
+  border-radius: var(--borderWidth);
+  padding: 10px;
+}
+.home-flex1 h2{
+  font-size: 20px;
+  text-align: left;
+
+}
+.home-flex1 p{
+  text-align: left;
+  font-weight: bold;
+  color: grey;
+}
+.cards1 {
+  display: flex;
+}
+
+.picture_2 {
+  margin: 0px 0px 50px 50px;
+}
+.content {
+  margin: 10px;
+  text-align: justify;
+
+}
+
+.stawberry-image-flex{
+  display: flex;
+  background-color: #f4a9d1;
+  width:50%;
+  border-radius: 10px;
+  font-size: 18px;
+}
+.stawberry-image-flex img{
+  padding: 10px 10px 0 10px;
+}
+.thumb-img{
+  width:700px;
+   height:720px;
+   padding-right: 30px;
+}

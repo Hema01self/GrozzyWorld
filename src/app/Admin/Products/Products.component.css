@@ -1,0 +1,24 @@
+table{
+  border-collapse: collapse;
+  width:100%;
+  border: #e0e0e0 2px solid;
+}
+thead{
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #e0e0e0;
+  height: 50px;
+  border:#989595 1px solid
+}
+tbody tr{
+  height: 70px;
+  font-size: 17px;
+  border-bottom:#e0e0e0 2px solid;
+  background-color:rgb(224, 224, 224,0.5);
+  text-align: center;
+  color: #575555;
+}
+.table-query{
+  padding: 35px 35px 140px;
+}

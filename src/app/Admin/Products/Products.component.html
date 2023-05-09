@@ -1,0 +1,46 @@
+<app-AdminHome></app-AdminHome>
+<div id="main">
+  <div class="top-nav">
+    <div class="top-page">
+      <span style="font-size:25px;cursor:pointer; color:grey;" class="nav">☰ Products</span>
+    </div>
+    <div class="profile">
+      <img src="assets/images/women1.jpg" class="pro-img" />
+      <p>Hemaltha<span>Admin</span></p>
+    </div>
+  </div>
+  <div class="table-query">
+
+
+  <table class="w-full">
+    <thead>
+        <tr>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Image</th>
+            <th>Price</th>
+            <th>Category</th>
+             <th>Delete</th>
+            <th>Edit</th>
+            <th>Add</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td><img [src]="product.image" width="40px" height="40px"></td>
+                <td>{{product.price|currency:'INR'}}</td>
+                <td>{{product.category}}</td>
+                <td><img (click)="removeProduct(product.id)" src="assets/images/trash-bin.png" width="40px" height="40px"> </td>
+                <td><img routerLink="/admin/EditProduct/{{product.id}}" src="assets/images/edit.png" width="40px" height="40px"> </td>
+
+
+            </tr>
+    </tbody>
+
+</table>
+<button (click)="addProduct(products,products.id)">Add</button></div>
+
+
+</div>

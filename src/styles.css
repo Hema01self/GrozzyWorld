@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+.style-heading
+{
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #7456df 0%,
+    #68c1e7 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+
+      font-size: 40px;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.section{
+  margin:0px 50px 0px 50px;
+  background-color: rgb(255, 255, 255, 0.8);
+  font-family: 'Poppins', sans-serif;
+}
+
+/*Admin side*/
+ #main {
+  margin-left: 300px;
+  background-color:  rgb(255, 255, 255, 0.8);
+  border-radius: 25px;
+  font-family: 'Poppins', sans-serif;
+}
+.top-nav{
+  padding-bottom: 110px;
+}
+.top-page{
+  float: left;
+  padding: 30px;
+}
+.profile{
+float: right;
+padding: 30px;
+display: flex;
+}
+.pro-img{
+	width: 40px;
+  height:50px;
+  padding: 5px;
+}
+.profile p span{
+  display: block;
+  color:grey;
+  font-size: 13px;
+}

@@ -1,0 +1,107 @@
+.section{
+  margin:0px 50px 0px 50px;
+  background-color: rgb(255, 255, 255, 0.8);
+  font-family: 'Poppins', sans-serif;
+}
+ /* .cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../../assets/images/home_fruit.png);
+  background-position: center;
+  background-size: cover;
+  padding-top: 17rem;
+  padding-bottom: 10rem;
+  /* background - image: url("../../assets/images/back2.jpg");
+}
+/* .cards{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  padding-top: 17rem;
+  padding-bottom: 10rem;
+  background-size: 100%;
+background-size: cover;
+background-image: url("../../assets/images/home_fruit.png");
+}*/
+.cards img{
+  max-width: 84.15rem;
+  max-height:30rem;
+  color: rgba(0, 0, 0,0.5);
+}
+.about-flex{
+  display: flex;
+}
+.section .picture_2 {
+  margin-top: 30px;
+}
+.content {
+  margin: 30px;
+  text-align: justify;
+
+}
+.about-emoji{
+  display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+   /*box gap*/
+    background: linear-gradient(
+      -40deg,
+      #e8bdc8 18%,
+      #f4e06d 48%,
+      #fff89c 59%,
+      #c3f8ff 100%
+    );
+}
+.about-grids{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color:black;
+  padding: 13px;
+  font-size: 23px;
+  font-weight: bold;
+
+}
+.about-grids:hover{
+
+  color:rgba(70, 68, 68,0.8);
+}
+
+.about-review{
+  display: flex;
+
+}
+.review-header{
+  text-align: center;
+}
+.about-review1{
+
+  padding:20px;
+  margin:20px;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: lighter;
+  color: #454444;
+  background: rgba(128, 128, 128,0.1);
+}
+.about-review1:hover{
+  box-shadow: 1px 2px 3px 4px rgba(12,12,12,0.2);
+}
+.stars i{
+  font-size: 20px;
+  color: orange;
+  padding: 10px;
+  margin-bottom: 10px;
+ }
+ .about-review1 img
+{
+  border-radius: 50%;
+  height:50px;
+  width:50px
+}
+.review-image-flex{
+  display: flex;
+}
+.review-image-flex h4
+{padding-left: 10px;}
