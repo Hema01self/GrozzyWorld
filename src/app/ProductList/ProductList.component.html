@@ -31,9 +31,9 @@
     </ng-container>
   </div>
   </div>
-    <div class="add-to-cart"><button (click)="addToCart(product)" *ngIf="!cart.includes(product) && (isLoggedIn)" class="add-to-cart-button">ADD TO CART</button>
-      <p *ngIf="!(isLoggedIn)"><button (click)="alertUser()" class="add-to-cart-button">ADD TO CART</button></p>
-    </div>
+    <div class="add-to-cart"><button (click)="addToCart(product)"  *ngIf="usercount===1" class="add-to-cart-button">ADD TO CART</button>
+      <button (click)="alertUser()"  *ngIf="usercount===0" class="add-to-cart-button">ADD TO CART</button>
+      </div>
     <div class="added-to-cart"><span style="  color: #56CCF2;
     font-weight: bold;"   *ngIf="cart.includes(product)">ADDED TO CART</span></div>
     </div>

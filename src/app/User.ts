@@ -6,5 +6,6 @@ export interface User {
   pcode:number,
   pword: string,
   cword: string,
+  userType: string,
   id: 1
 }

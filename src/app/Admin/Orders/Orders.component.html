@@ -1,15 +1,47 @@
 <app-AdminHome></app-AdminHome>
 <div id="main">
-  <div class="head">
-    <div class="col-div-6">
-      <span style="font-size:30px;cursor:pointer; color:grey;" class="nav">☰ Dashboard</span>
+  <div class="top-nav">
+    <div class="top-page">
+      <span style="font-size:25px;cursor:pointer; color:grey;" class="nav">☰ Orders</span>
     </div>
-    <div class="col-div-6">
-      <div class="profile">
-        <img src="assets/images/women1.jpg" class="pro-img" />
-        <p>Hemaltha<span>Admin</span></p>
-      </div>
+    <div class="profile">
+      <img src="assets/images/women1.jpg" class="pro-img" />
+      <p>Hemaltha<span>Admin</span></p>
     </div>
   </div>
-  <p>new added</p>
+  <div class="cart-table">
+    <div *ngIf="orders.length>0">
+    <table>
+      <thead>
+        <tr>
+
+          <th>Product Name</th>
+          <th>Product Image</th>
+          <th>Price</th>
+          <th>Quantity</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of orders">
+
+
+          <td>{{item.name}}</td>
+          <td><img [src]="item.image" width="100px" height="100px"></td>
+          <td>
+            <p> {{item.price|currency:'INR'}}</p>
+          </td>
+          <td> {{item.quantity}}</td>
+</tr>
+      </tbody>
+    </table>
+
+<div class="total"><h3>Grand Total: {{getGrandTotal()|currency:'INR'}}</h3></div>
+</div>
+<div *ngIf="orders.length===0">
+  <div class="cart-image"><img src="assets/images/empty-cart.png"></div>
+<div class="order"><h3>No orders available</h3></div>
+</div>
+</div>
+<img src="assets/images/home_fruit.png" width="1147px">
 </div>

@@ -21,8 +21,8 @@
           <input type="password" placeholder="Enter password" name="password" #pword="ngModel" [(ngModel)]="password"
             required="" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$">
           <div *ngIf="pword.errors && (pword.dirty || pword.touched)">
-            <small [hidden]="!pword.errors['required']">Please enter Password</small>
-            <small [hidden]="!pword.errors['pattern']">length should be 8</small>
+            <div class="small-text"><small [hidden]="!pword.errors['required']">Please enter Password</small></div>
+            <div class="small-text"><small  [hidden]="!pword.errors['pattern']">Atleast 1-uppercase, lowercase, number, special character and minimum length should be 8</small></div>
 
           </div>
           <!-- <i class="fas fa-check-circle"></i>
@@ -35,132 +35,16 @@
           color: #000;
           font-size: 1rem;
           padding: 10px;
-          margin-top: 20px;
+          margin-top: 30px;
           width: 100%;
         " />
-        <div class="forgot">Forgot Password</div>
+        <div class="forgot"><a>Forgot Password</a></div>
          </form>
     </div>
     <div class="signup">If you are a new user <a routerLink="/register"> Register</a> Here</div>
 
   </div>
 </div>
-<!--
-<ul>
-<li *ngIf="!isLoggedIn"><a routerLink="/login">Login</a></li>
-<li *ngIf="isLoggedIn"><button (click)="logout()">Logout</button></li>
 
-</ul>
-{{errorMessage}}
--->
-<!--
-    login(username: string, password: string) {
-    return this.http.get<any[]>('http://localhost:3000/users').pipe(
-      tap((users) => {
-        const user = users.find((u) => u.email === username && u.pword === password);
-
-        if (user) {
-          this.loggedIn=true;
-         console.log(user.email);
-          console.log(user.pword);
-          console.log("credentials are match");
-          console.log('login status '+this.loggedIn);
-        }
-
-        else {
-          this.loggedIn=false;
-          console.log(user.email);
-          console.log(user.pword);
-          console.log("credentials are not match");
-          console.log('login status ' +this.loggedIn);
-          alert('false');
-        }
-      })
-    );
-  }
- -->
- <!-- import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthService } from '../auth.service';
-import { User } from '../User';
-import { HttpClient } from '@angular/common/http';
-import { UserService } from '../user.service';
-
-@Component({
-  selector: 'app-Login',
-  templateUrl: './Login.component.html',
-  styleUrls: ['./Login.component.css'],
-})
-export class LoginComponent {
-  emailid: any = '';
-  password: any = '';
-  isLoggedIn = false;
-  errorMessage!: string;
-  constructor(
-    private authService: AuthService,
-    private http: HttpClient,
-    private route: Router,
-    private userService:UserService
-  ) {}
-  login() {
-    this.http.get<any>('http://localhost:3000/users').subscribe((users) => {
-      const user = users.find(
-        (u: any) => u.email === this.emailid && u.pword === this.password
-      );
-
-      console.log(this.emailid);
-      console.log(this.password);
-      console.log(this.isLoggedIn);
-      if (user) {
-        this.isLoggedIn = true;
-        this.userService.userLogin=this.isLoggedIn;
-        alert('login Suceessfully');
-
-        // this.route.navigate(['/home']);
-      } else {
-        alert('Check your credentials');
-      }
-    });
-  }
-  logout(): void {
-
-        this.isLoggedIn = false;
-        this.userService.userLogin=this.isLoggedIn;
-        console.log(this.isLoggedIn);
-
-  }
-  loginstatus(){
-    console.log(this.isLoggedIn);
-  }
-
-  onLogin():void{
-    this.authService.login(this.emailid,this.password).subscribe(
-      result => {
-        if(result){
-          this.route.navigate(['\home']);
-          alert('Logged In Successfully');
-          console.log(this.emailid);
-          console.log(this.password);
-          console.log('login.ts matched')
-        }
-        else{
-          // this.errorMessage='invalid uname or pword';
-          // console.log('invalid');
-          // alert('invalid');
-        }
-
-
-      },
-      (error)=>{
-        console.log(error);
-        this.errorMessage='An error occurred while logging';
-        alert('Credentials are mismatch')
-      }
-    );
-  }
-
-
-
-}-->
 
 <app-Footer></app-Footer>

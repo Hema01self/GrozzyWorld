@@ -1,60 +1,51 @@
 <app-Header></app-Header>
 <div class="section">
-<ng-container *ngIf="cartItems.length!=0">
-  <div class="cart-table">
-<table>
-  <thead>
-    <tr>
-      <th>S.No</th>
-      <th>Product Name</th>
-      <th>Product Image</th>
-      <th>Price</th>
-      <th>Quantity</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of cartItems; let x=index">
+  <ng-container *ngIf="cartItems.length!=0">
+    <div class="cart-table">
+      <table>
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Product Name</th>
+            <th>Product Image</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let item of cartItems; let x=index">
 
-        <td>{{x+1}}</td>
-        <td>{{item.name}}</td>
-        <td><img [src]="item.image" width="100px" height="100px"></td>
-        <td><p > {{item.price|currency:'INR'}}</p></td>
-        <td> {{item.quantity}}</td>
-        <td><button (click)="removeFromCart(item)" class="cart-remove-button">Remove</button></td>
+            <td>{{x+1}}</td>
+            <td>{{item.name}}</td>
+            <td><img [src]="item.image" width="100px" height="100px"></td>
+            <td>
+              <p> {{item.price|currency:'INR'}}</p>
+            </td>
+            <td> {{item.quantity}}</td>
+            <td><button (click)="removeFromCart(item)" class="cart-remove-button">Remove</button></td>
 
-    </tr>
-    <tr>
-  <td colspan="2"></td>
-<td><button (click)="emptyCart();confirmClearCart()" class="cart-remove-button">Empty</button></td>
-<td><button routerLink="/product" class="cart-shop-button">Shop More</button></td>
-<td><button class="cart-checkout-button" routerLink="/delivery">Checkout</button></td>
-<td>Grand Total: {{ getGrandTotal()|currency:'INR'}}</td>
-    </tr>
-  </tbody>
-</table>
+          </tr>
+          <tr>
+            <td colspan="2"></td>
+            <td><button (click)="emptyCart();confirmClearCart()" class="cart-remove-button">Empty</button></td>
+            <td><button routerLink="/product" class="cart-shop-button">Shop More</button></td>
+            <td><button (click)="checkout()" class="cart-checkout-button" routerLink="/delivery">Checkout</button></td>
+            <td>Grand Total: {{ getGrandTotal()|currency:'INR'}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  </ng-container>
+
+  <ng-container *ngIf="cartItems.length==0">
+    <div class="cart-image"><img src="assets/images/empty-cart.png"></div>
+    <h2 class="cart-content1">Your Cart is Empty</h2>
+    <h3 class="cart-content2">Looks like you haven't added anything in you cart yet</h3>
+    <div class="cart-order"><button class="cart-order-button" routerLink="/product">Order Now</button></div>
+  </ng-container>
+
 </div>
-
-
-</ng-container>
-
-<ng-container *ngIf="cartItems.length==0">
-  <div class="cart-image"><img src="assets/images/empty-cart.png"></div>
-<h2 class="cart-content1">Your Cart is Empty</h2>
-<h3 class="cart-content2">Looks like you haven't added anything in you cart yet</h3>
-<div class="cart-order"><button class="cart-order-button" routerLink="/product">Order Now</button></div>
-</ng-container>
-
-
-<!-- <div class="cart-icon">
-  <i class="fa fa-shopping-cart"></i>
-  <span class="badge">No of items added to cart {{ cartItemCount }}</span>
-</div>
-<h1>Grand Total: {{ getGrandTotal()|currency:'INR' }}</h1>
-<ul>
-  <div *ngFor="let item of cartItems; let i=index">
-    {{item.name}}   {{item.price |currency:'INR'}}
-
-    <button (click)="deleteItem(i)">Remove</button> -->
-  </div>
 <app-Footer></app-Footer>

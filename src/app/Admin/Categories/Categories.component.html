@@ -9,4 +9,26 @@
       <p>Hemaltha<span>Admin</span></p>
     </div>
   </div>
+  <div class="cat-flex">
+  <div class="category">
+    <div class="cat-button"><a (click)="filter('')"><button class="style-heading1">All</button></a></div>
+    <div class="cat-button"><a (click)="filter('fruit')"><button class="style-heading1">Fruits</button></a></div>
+    <div class="cat-button"><a (click)="filter('veg')"><button class="style-heading1">Vegetables</button></a></div>
+    <div class="cat-button"><a (click)="filter('Dairy')"><button class="style-heading1">Dairy Products</button></a></div>
+    <div class="cat-button"><a (click)="filter('grains')"><button class="style-heading1">Food Grains</button></a></div>
+    <div class="cat-button" ><a routerLink="/admin/updateProduct"><button class="style-heading1">Add</button></a></div>
+
+  </div>
+  <div class="grid grid-three-columns">
+
+    <div *ngFor="let product of filterCategory" class="main">
+      <div class="product-name"><h4>{{ product.name }}</h4></div>
+      <div class="product-image"><img [src]="product.image" width="100px" height="100px"></div>
+      <div class="grid grid-two-columns">
+        <div class="price"><p>{{ product.price|currency:'INR'}}</p></div>
+    </div>
+  </div>
+</div>
+  </div>
+
 </div>

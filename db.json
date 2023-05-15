@@ -11,8 +11,6 @@
       "uname": "hema",
       "email": "hemalathanarayanan01@gmail.com",
       "phoneno": "9360806740",
-      "add": "kulasekara alwar st",
-      "pcode": "636001",
       "pword": "Hema@123",
       "cword": "Hema@123",
       "id": 1
@@ -21,8 +19,6 @@
       "uname": "Abi",
       "email": "abinayasril@gmail.com",
       "phoneno": "8220415334",
-      "add": "19/68",
-      "pcode": "636001",
       "pword": "Abil@123",
       "cword": "Abil@123",
       "id": 2
@@ -31,8 +27,6 @@
       "uname": "Kirthi",
       "email": "kirthinarayanan01@gmail.com",
       "phoneno": "8870743694",
-      "add": "Salem",
-      "pcode": "636001",
       "pword": "Kirthi@01",
       "cword": "Kirthi@01",
       "id": 3
@@ -52,8 +46,17 @@
       "pword": "Arya@123",
       "cword": "Arya@123",
       "id": 5
+    },
+    {
+      "uname": "Sudharsan",
+      "email": "sudharsan25252@gmail.com",
+      "phoneno": "9360680678",
+      "pword": "Sudha@123",
+      "cword": "Sudha@123",
+      "id": 6
     }
   ],
+  "current-user": [],
   "contact-info": [
     {
       "uname": "Hema",
@@ -90,25 +93,26 @@
   ],
   "products": [
     {
+      "id": 1,
       "name": "Tomato",
-      "price": "17",
-      "category": "veg",
+      "price": "15",
       "quantity": "1",
-      "description": "about the product",
+      "disabled": false,
+      "description": "",
       "image": "assets/images/tomatoes.jpg",
-      "id": 1
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "veg"
     },
     {
-      "id": 2,
       "name": "Cauliflower",
-      "price": 25,
-      "quantity": 1,
-      "disabled": false,
+      "price": "25",
+      "category": "veg",
+      "quantity": "1",
+      "description": "about the products",
       "image": "assets/images/image1.webp",
-      "detail": "about the product",
-      "weight": "500g (1pc)",
-      "rating": 4.8,
-      "category": "veg"
+      "id": 2
     },
     {
       "id": 3,
@@ -213,16 +217,13 @@
       "category": "fruit"
     },
     {
-      "id": 12,
       "name": "Pomegranate",
-      "price": 85,
-      "quantity": 1,
-      "disabled": false,
+      "price": "87",
+      "category": "fruit",
+      "quantity": "1",
+      "description": "about the product",
       "image": "assets/images/exotic-delicious-pomegranate-white-background.jpg",
-      "detail": "about the product",
-      "weight": "1kg",
-      "rating": 5,
-      "category": "fruit"
+      "id": 12
     },
     {
       "id": 13,
@@ -333,16 +334,61 @@
       "category": "grains"
     },
     {
-      "id": 22,
       "name": "Urad dal",
-      "price": 136,
-      "quantity": 1,
-      "disabled": false,
+      "price": "135",
+      "category": "grains",
+      "quantity": "1",
+      "description": "about the product",
       "image": "assets/images/urad-dal.jpg",
-      "detail": "about the product",
-      "weight": "1kg",
-      "rating": 5,
-      "category": "grains"
+      "id": 22
     }
+  ],
+  "order": [
+    [
+      {
+        "name": "Carrot",
+        "price": "35",
+        "category": "veg",
+        "quantity": 2,
+        "description": "about the product is carrot",
+        "image": "assets/images/slide5.jpg",
+        "id": 7,
+        "disabled": true
+      },
+      {
+        "id": 11,
+        "name": "Papaya",
+        "price": 37,
+        "quantity": 1,
+        "disabled": true,
+        "image": "assets/images/papaya-fruit-isolated.jpg",
+        "detail": "about the product",
+        "weight": "1kg",
+        "rating": 5,
+        "category": "fruit"
+      },
+      {
+        "id": 10,
+        "name": "Strawberry",
+        "price": 76,
+        "quantity": 1,
+        "disabled": true,
+        "image": "assets/images/strawberry-berry-levitating-white-background.jpg",
+        "detail": "about the product",
+        "weight": "1kg",
+        "rating": 5,
+        "category": "fruit"
+      },
+      {
+        "name": "Cauliflower",
+        "price": "25",
+        "category": "veg",
+        "quantity": "1",
+        "description": "about the products",
+        "image": "assets/images/image1.webp",
+        "id": 2,
+        "disabled": true
+      }
+    ]
   ]
 }

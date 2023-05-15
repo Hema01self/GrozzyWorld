@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AuthGuard } from '../auth.guard';
 import { ProductApiService } from '../product-api.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-ProductList',
@@ -13,20 +14,23 @@ import { ProductApiService } from '../product-api.service';
   styleUrls: ['./ProductList.component.css'],
 })
 export class ProductListComponent implements OnInit {
-  isLoggedIn!: boolean;
+
   products: Product[] = [];
   cart: Product[] = [];
   public filterCategory: any;
   public totalItem: number = 0;
+  public usercount:number=0;
+  users:any=[];
   constructor(
     private cartService: CartService,
     private authService: AuthService,
     private route: Router,
-    private service: ProductApiService
+    private service: ProductApiService,
+    private userService:UserService
   ) {
     this.cart = this.cartService.getItems();
-    this.isLoggedIn =authService.isLoggedIn;
-    console.log('productList.ts '+this.isLoggedIn);
+    // this.isLoggedIn =authService.isLoggedIn;
+    this.userService.getCurrentUser().subscribe(user=>this.users=user);
   }
   ngOnInit(): void {
     this.service.getProducts().subscribe((products) => {
@@ -36,18 +40,20 @@ export class ProductListComponent implements OnInit {
     this.cartService.getCartCount().subscribe((total) => {
       this.totalItem = total;
     });
-
+    this.userService.getUserCount().subscribe((usertotal)=>{
+      this.usercount=usertotal;
+    });
     // this.isLoggedIn = this.authService.isLoggedIn;
     // console.log('login status in productlist.ts ' + this.isLoggedIn);
   }
 
   addToCart(product: Product) {
-    if (this.isLoggedIn) {
+
       this.cartService.addToCart(product);
       window.alert('Added to cart');
       console.log(product);
       product.disabled = true;
-    }
+
   }
   getGrandTotal() {
     let grandTotal = 0;
@@ -67,7 +73,7 @@ export class ProductListComponent implements OnInit {
 
   alertUser() {
     alert('Please login to Add to cart');
-    // this.route.navigate(['/login']);
+    this.route.navigate(['/login']);
   }
 
   //

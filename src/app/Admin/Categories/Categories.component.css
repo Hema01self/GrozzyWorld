@@ -1,0 +1,24 @@
+.cat-flex{
+  display: flex;
+}
+.cat-button{
+  padding: 10px;
+  padding-bottom: 50px;
+}
+.style-heading1{
+  width: 250px;
+  height: 40px;
+  background: linear-gradient(270deg, #ED765E 0%, #E3BDE5 100%);
+  font-size: 15px;
+}
+.grid{
+  display:grid;
+}
+.grid-three-columns{
+  grid-template-columns:repeat(6,1fr);
+  padding-left: 50px;
+
+}
+.main{
+  padding: 15px;
+}

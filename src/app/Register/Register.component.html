@@ -55,7 +55,7 @@
           <input type="password" placeholder="Enter password" name="password" formControlName="password" [(ngModel)]="password">
           <div *ngIf="loginForm1.controls['password'].invalid&&loginForm1.controls['password'].touched">
             <small *ngIf="loginForm1.controls['password'].errors?.['required']">Please enter password</small>
-            <small *ngIf="loginForm1.controls['password'].errors?.['pattern']">Please enter valid password</small>
+            <small *ngIf="loginForm1.controls['password'].errors?.['pattern']">Atleast 1-uppercase, lowercase, number, special character and minimum length should be 8</small>
           </div>
         </div>
 

@@ -5,8 +5,8 @@
       <span style="font-size:25px;cursor:pointer; color:grey;" class="nav">☰ Dashboard</span>
     </div>
     <div class="profile">
-      <img src="assets/images/women1.jpg" class="pro-img" />
-      <p>Hemaltha<span>Admin</span></p>
+      <img src="assets/images/user.png" class="pro-img" />
+      <p *ngFor="let admin of admins">{{admin.name}}<span>Admin</span></p>
     </div>
   </div>
   <!-- content -->
@@ -64,7 +64,7 @@
     <div class="col-div-4">
       <div class="box-4">
         <div class="content-box">
-          <p>TOTAL SALE <button class="all-button"><a routerLink="/admin/products">See All</a></button></p>
+          <p>TOTAL SALE <button class="all-button"><a routerLink="/admin/orders">See All</a></button></p>
 
         <div class="circle-wrap circle-box">
           <div class="circle">

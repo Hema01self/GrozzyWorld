@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/Product';
+import { CartService } from 'src/app/cart.service';
+import { ProductApiService } from 'src/app/product-api.service';
 
 @Component({
   selector: 'app-Orders',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdersComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  cartItems:any = [];
+  items: Product[]=[];
+orders:any[]=[];
+  constructor(private cartService: CartService,private productApiService:ProductApiService) {
+this.productApiService.getOrder().subscribe((orders)=>{this.orders=orders[0]})
   }
 
+  ngOnInit() {
+
+
+  }
+  getGrandTotal(){
+    let grandTotal=0;
+    this.cartService.getItems().forEach((item)=>{
+      grandTotal+=item.price*item.quantity;
+    });
+    return grandTotal;
+  }
 }

@@ -11,6 +11,7 @@ import { UserService } from 'src/app/user.service';
 })
 export class DashboardComponent implements OnInit {
   users:any[]=[];
+  admins:any[]=[];
   queries:any[]=[];
   products:any[]=[];
   UserCount=0;
@@ -19,6 +20,9 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.userService.getUserInfo().subscribe((users)=>{
       this.users=users;
+    });
+    this.userService.getAdminInfo().subscribe((admins)=>{
+      this.admins=admins;
     });
     this.userService.getContactInfo().subscribe((queries)=>{
       this.queries=queries;

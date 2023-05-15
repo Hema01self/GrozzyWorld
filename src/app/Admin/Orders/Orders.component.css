@@ -1,0 +1,30 @@
+table
+{
+   border-collapse: collapse;
+  width: 100%;
+}
+table, td, th {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  color:rgb(25, 2, 94);
+}
+td{
+  text-align: center;
+  font-weight:bold ;
+  color:rgb(25, 2, 94);
+}
+.cart-table{
+  margin:30px;
+}
+.cart-image{
+  text-align: center;
+}
+.total{
+  text-align:right;
+}
+.order
+{
+  text-align: center;
+  padding-bottom: 60px;
+}

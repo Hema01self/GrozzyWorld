@@ -3,7 +3,6 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ProductApiService } from 'src/app/product-api.service';
 
-
 @Component({
   selector: 'app-updateProduct',
   templateUrl: './updateProduct.component.html',
