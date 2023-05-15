@@ -12,13 +12,15 @@ export class OrdersComponent implements OnInit {
 
   cartItems:any = [];
   items: Product[]=[];
-orders:any[]=[];
+  orders:any[]=[];
   constructor(private cartService: CartService,private productApiService:ProductApiService) {
-this.productApiService.getOrder().subscribe((orders)=>{this.orders=orders[0]})
+// this.productApiService.getOrder().subscribe((orders)=>{this.orders=orders[0]})
   }
 
   ngOnInit() {
-
+this.productApiService.getOrder().subscribe((response)=>{
+  this.orders =response;
+});
 
   }
   getGrandTotal(){

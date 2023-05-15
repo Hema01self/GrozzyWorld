@@ -344,51 +344,55 @@
     }
   ],
   "order": [
-    [
-      {
-        "name": "Carrot",
-        "price": "35",
-        "category": "veg",
-        "quantity": 2,
-        "description": "about the product is carrot",
-        "image": "assets/images/slide5.jpg",
-        "id": 7,
-        "disabled": true
-      },
-      {
-        "id": 11,
-        "name": "Papaya",
-        "price": 37,
-        "quantity": 1,
-        "disabled": true,
-        "image": "assets/images/papaya-fruit-isolated.jpg",
-        "detail": "about the product",
-        "weight": "1kg",
-        "rating": 5,
-        "category": "fruit"
-      },
-      {
-        "id": 10,
-        "name": "Strawberry",
-        "price": 76,
-        "quantity": 1,
-        "disabled": true,
-        "image": "assets/images/strawberry-berry-levitating-white-background.jpg",
-        "detail": "about the product",
-        "weight": "1kg",
-        "rating": 5,
-        "category": "fruit"
-      },
-      {
-        "name": "Cauliflower",
-        "price": "25",
-        "category": "veg",
-        "quantity": "1",
-        "description": "about the products",
-        "image": "assets/images/image1.webp",
-        "id": 2,
-        "disabled": true
-      }
-    ]
+    {
+      "user": [
+        {
+          "email": "hemalathanarayanan01@gmail.com",
+          "pword": "Hema@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "id": 3,
+          "name": "Potato",
+          "price": 20,
+          "quantity": 1,
+          "disabled": true,
+          "image": "assets/images/slide2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "veg"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "user": [
+        {
+          "email": "sudharsan25252@gmail.com",
+          "pword": "Sudha@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "id": 3,
+          "name": "Potato",
+          "price": 20,
+          "quantity": 1,
+          "disabled": true,
+          "image": "assets/images/slide2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "veg"
+        }
+      ],
+      "id": 2
+    }
   ]
 }

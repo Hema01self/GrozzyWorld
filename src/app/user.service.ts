@@ -9,7 +9,7 @@ import { User } from './User';
 export class UserService {
 
 constructor(private client:HttpClient) { }
-userLogin:boolean=false;
+
 userCount = new BehaviorSubject(0);
 private contactUrl="http://localhost:3000/contact-info";
 private userUrl="http://localhost:3000/users";

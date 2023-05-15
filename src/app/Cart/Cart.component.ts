@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 import { Product } from '../Product';
 import { ProductApiService } from '../product-api.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-Cart',
@@ -10,10 +11,14 @@ import { ProductApiService } from '../product-api.service';
 })
 export class CartComponent implements OnInit {
   cartItemCount: number;
-  cartItems: any ;
+  cartItems: any;
   items: Product[] = [];
 
-  constructor(private cartService: CartService,private productApiService:ProductApiService) {
+  constructor(
+    private cartService: CartService,
+    private productApiService: ProductApiService,
+    private userService: UserService
+  ) {
     this.cartItemCount = this.cartService.cartItemCount.value;
     this.cartItems = this.cartService.getItems();
   }
@@ -48,14 +53,28 @@ export class CartComponent implements OnInit {
     this.cartService.removeFromCart(product);
   }
 
-  checkout(){
-    const cartItems: Product[]=this.cartService.getItems();
-    this.productApiService.saveOrder(cartItems).subscribe(()=>{
-      console.log('saved success');
-    },
-    (error)=>{
-      console.error('Failed to save cart ',error);
-    });
-  }
+  checkout() {
+    const cartItems: Product[] = this.cartService.getItems();
 
+    this.userService.getCurrentUser().subscribe(
+      (userDetails) => {
+        const order = {
+          user: userDetails,
+          items: cartItems,
+        };
+
+        this.productApiService.saveOrder(order).subscribe(
+          () => {
+            console.log('saved success');
+          },
+          (error) => {
+            console.error('Failed to save cart ', error);
+          }
+        );
+      },
+      (error) => {
+        console.error('Falied to fetch user details', error);
+      }
+    );
+  }
 }
