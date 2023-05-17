@@ -7,7 +7,7 @@
 
         <div class="form-control">
           <input type="text" placeholder="Enter name" name="username"  formControlName="username" [(ngModel)]="username" pattern="^[A-Za-z\s]+$" />
-          <div *ngIf="loginForm1.controls['username'].dirty">
+          <div *ngIf="(loginForm1.controls['username'].invalid && loginForm1.controls['username'].touched) ">
             <small *ngIf="loginForm1.controls['username'].errors?.['required']">Please enter name</small>
             <small *ngIf="loginForm1.controls['username'].errors?.['pattern']">Please enter alphabets only</small>
             <small *ngIf="loginForm1.controls['username'].errors?.['minLength']">Please enter valid name</small>

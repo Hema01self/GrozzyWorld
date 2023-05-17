@@ -22,7 +22,7 @@ export class ProductListComponent implements OnInit {
   public usercount:number=0;
   users:any=[];
   constructor(
-    private cartService: CartService,
+    public cartService: CartService,
     private authService: AuthService,
     private route: Router,
     private service: ProductApiService,
@@ -48,12 +48,14 @@ export class ProductListComponent implements OnInit {
   }
 
   addToCart(product: Product) {
-
+    if (this.cartService.isProductInCart(product)) {
+      window.alert('Product already added to cart');
+    } else{
       this.cartService.addToCart(product);
       window.alert('Added to cart');
       console.log(product);
       product.disabled = true;
-
+    }
   }
   getGrandTotal() {
     let grandTotal = 0;

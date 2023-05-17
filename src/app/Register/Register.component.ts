@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./Register.component.css'],
 })
 export class RegisterComponent implements OnInit {
+
   constructor(
     private fb: FormBuilder,
     private userService: UserService,
@@ -48,8 +49,11 @@ export class RegisterComponent implements OnInit {
   password: any = '';
   cpassword: any = '';
 
-  ngOnInit() {}
+  ngOnInit() {
+
+  }
   submitForm() {
+   
     var body = {
       uname: this.username,
       email: this.emailid,

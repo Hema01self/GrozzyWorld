@@ -2,29 +2,41 @@
   <a routerLink="/home" class="logo"><img src="assets\images\new_logo.png" width="200px" height="60px"></a>
   <nav>
     <ul>
-      <li><a routerLink="/home">Home</a></li>
-      <li><a routerLink="/about">About</a></li>
-      <li><a routerLink="/product">Shop</a>
+      <li routerLinkActive="active-page"><a routerLink="/home">Home</a></li>
+      <li routerLinkActive="active-page"><a routerLink="/about">About</a></li>
+      <li routerLinkActive="active-page"><a routerLink="/product">Shop</a>
         <ul>
           <!-- <li><a routerLink="categories">Categories</a></li> -->
-           <li><a routerLink="/product">Product</a></li>
-          <li><a routerLink="/cart">Cart</a></li>
+          <li routerLinkActive="active-page"><a routerLink="/product">Product</a></li>
+          <li routerLinkActive="active-page"><a routerLink="/cart">Cart</a></li>
         </ul>
       </li>
       <!-- <li><i class="fa fa-shopping-cart cart-icon" routerLink="/cart"></i>
       <span class="badge">{{totalItem}}</span></li>-->
       <!-- <li><a routerLink="contact">Contact</a></li> -->
-       <li>
+      <li routerLinkActive="active-page">
         <a *ngIf="usercount===0" routerLink="/login">Login</a>
-         <a  *ngIf="usercount===1" (click)="removeUser(users.id)">Logout</a>
+        <a *ngIf="usercount===1" (click)="logout()">Logout</a>
 
       </li>
+      <!-- <ng-container *ngIf="isLoggedIn(); else loggedOutSection">
+        <button (click)="logout()">Logout</button>
+      </ng-container>
+      <ng-template #loggedOutSection>
+        <button (click)="route.navigate(['/login'])">Login</button>
+      </ng-template> -->
 
-        <a><li  *ngFor="let user of users" (click)="removeUser(user.id)" >.</li></a>
 
-       <!-- <li ><a routerLink="/admin/dashboard">Dashboard</a></li> -->
+        <!-- <a ><li  *ngFor="let user of users" (click)="removeUser(user.id)">.</li></a> -->
 
-        <!-- <li  [hidden]="loginStatus" (click)="logIn()"><a routerLink="/login">Login</a></li>
+      <!-- <ng-container *ngFor="let user of users">
+        <li><a *ngIf="usercount===0" routerLink="/login">Login</a>
+        <a *ngIf="usercount===1" (click)="removeUser(user.id)">Logout</a></li>
+      </ng-container>-->
+
+      <!-- <li ><a routerLink="/admin/dashboard">Dashboard</a></li> -->
+
+      <!-- <li  [hidden]="loginStatus" (click)="logIn()"><a routerLink="/login">Login</a></li>
 <li [hidden]="!loginStatus" (click)="logOut()">Logout</li>-->
 
     </ul>

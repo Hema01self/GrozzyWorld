@@ -5,34 +5,27 @@
       <span style="font-size:25px;cursor:pointer; color:grey;" class="nav">☰ Orders</span>
     </div>
     <div class="profile">
-      <img src="assets/images/women1.jpg" class="pro-img" />
+      <img src="assets/images/user.png" class="pro-img" />
       <p>Hemaltha<span>Admin</span></p>
     </div>
   </div>
 
-  <div *ngFor="let orderItem of orders">
-    <h2>Order ID: {{ orderItem.id }}</h2>
+  <div *ngFor="let orderItem of orders" class="order-detail">
+    <h3>Order ID: {{ orderItem.id }}</h3>
 
     <div *ngFor="let user of orderItem.user">
-      <h3>User Details:</h3>
-      <p>Email: {{ user.email }}</p>
-      <p>Password: {{ user.pword }}</p>
-      <p>User Type: {{ user.userType }}</p>
-      <p>ID: {{ user.id }}</p>
+      <h3>User Details: </h3>
+      <p style="color: #dd5e89;">Email : {{ user.email }}</p>
+      <!-- <p>ID: {{ user.id }}</p> -->
     </div>
+    <h3>Item Details:</h3>
+    <div *ngFor="let item of orderItem.items" class="grid grid-three-columns">
 
-    <div *ngFor="let item of orderItem.items">
-      <h3>Item Details:</h3>
-      <p>ID: {{ item.id }}</p>
-      <p>Name: {{ item.name }}</p>
-      <p>Price: {{ item.price }}</p>
-      <p>Quantity: {{ item.quantity }}</p>
-      <p>Disabled: {{ item.disabled }}</p>
-      <p>Image: {{ item.image }}</p>
-      <p>Detail: {{ item.detail }}</p>
-      <p>Weight: {{ item.weight }}</p>
-      <p>Rating: {{ item.rating }}</p>
-      <p>Category: {{ item.category }}</p>
+      <p>Product ID : {{ item.id }}</p>
+      <p>Name : {{ item.name }}</p>
+      <p>Price : {{ item.price }}</p>
+      <p>Quantity : {{ item.quantity }}</p>
+      <p>Category : {{ item.category }}</p>
     </div>
   </div>
   <!-- <div class="cart-table">
@@ -70,4 +63,9 @@
 </div>
 </div>
 <img src="assets/images/home_fruit.png" width="1147px">-->
+<div *ngIf="orders.length===0">
+  <div class="cart-image"><img src="assets/images/empty-cart.png"></div>
+<div class="order"><h3>No orders available</h3></div>
+<img src="assets/images/home_fruit.png" width="1147px">
+</div>
 </div>

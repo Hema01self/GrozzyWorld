@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { User } from './User';
 
 @Injectable({
@@ -32,7 +32,12 @@ getAdminInfo():Observable<any[]>{
 currentUser(user: User): Observable<User>{
 const dbUrl='http://localhost:3000/current-user';
 this.userCount.next(this.userCount.value + 1);
-return this.client.post<User>(dbUrl,user);
+return this.client.post<User>(dbUrl,user).pipe(
+  tap((loggedInUser: User) => {
+    // Store the user information in local storage
+    localStorage.setItem('currentUser', JSON.stringify(loggedInUser));
+  })
+);
 }
 getUserCount(){
   return this.userCount.asObservable();;

@@ -92,3 +92,8 @@ header nav ul li ul li {
     padding: 4px;
     border-radius: 50%;
   }
+
+  .active-page a {
+    font-weight: bolder;
+ 
+  }

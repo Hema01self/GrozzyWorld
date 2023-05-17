@@ -74,7 +74,7 @@ export class LoginComponent {
       },
       (error)=>{
         console.log(error);
-        alert('admin credentials are mismatch');
+        // alert('admin credentials are mismatch');
       }
     );
   }

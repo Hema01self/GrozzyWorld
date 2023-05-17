@@ -66,6 +66,7 @@ export class CartComponent implements OnInit {
         this.productApiService.saveOrder(order).subscribe(
           () => {
             console.log('saved success');
+            // this.emptyCart();
           },
           (error) => {
             console.error('Failed to save cart ', error);

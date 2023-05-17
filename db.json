@@ -17,7 +17,7 @@
     },
     {
       "uname": "Abi",
-      "email": "abinayasril@gmail.com",
+      "email": "abinayasri@gmail.com",
       "phoneno": "8220415334",
       "pword": "Abil@123",
       "cword": "Abil@123",
@@ -54,6 +54,14 @@
       "pword": "Sudha@123",
       "cword": "Sudha@123",
       "id": 6
+    },
+    {
+      "uname": "Shreya",
+      "email": "shreya@gmail.com",
+      "phoneno": "8220415335",
+      "pword": "Shreya@123",
+      "cword": "Shreya@123",
+      "id": 7
     }
   ],
   "current-user": [],
@@ -347,24 +355,44 @@
     {
       "user": [
         {
-          "email": "hemalathanarayanan01@gmail.com",
-          "pword": "Hema@123",
+          "email": "priya@gmail.com",
+          "pword": "Priya@123",
           "userType": "user",
           "id": 1
         }
       ],
       "items": [
         {
+          "name": "Raddish",
+          "price": "25",
+          "category": "veg",
+          "quantity": 2,
+          "description": "about the product",
+          "image": "assets/images/image2.jpg",
+          "id": 4,
+          "disabled": true
+        },
+        {
           "id": 3,
           "name": "Potato",
           "price": 20,
-          "quantity": 1,
+          "quantity": 2,
           "disabled": true,
           "image": "assets/images/slide2.jpg",
           "detail": "about the product",
           "weight": "1kg",
           "rating": 5,
           "category": "veg"
+        },
+        {
+          "name": "Carrot",
+          "price": "35",
+          "category": "veg",
+          "quantity": 2,
+          "description": "about the product is carrot",
+          "image": "assets/images/slide5.jpg",
+          "id": 7,
+          "disabled": true
         }
       ],
       "id": 1
@@ -393,6 +421,469 @@
         }
       ],
       "id": 2
+    },
+    {
+      "user": [
+        {
+          "email": "hemalathanarayanan01@gmail.com",
+          "pword": "Hema@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "name": "Raddish",
+          "price": "25",
+          "category": "veg",
+          "quantity": "1",
+          "description": "about the product",
+          "image": "assets/images/image2.jpg",
+          "id": 4,
+          "disabled": true
+        },
+        {
+          "id": 3,
+          "name": "Potato",
+          "price": 20,
+          "quantity": 2,
+          "disabled": true,
+          "image": "assets/images/slide2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "veg"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "user": [
+        {
+          "email": "hemalathanarayanan01@gmail.com",
+          "pword": "Hema@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "id": 3,
+          "name": "Potato",
+          "price": 20,
+          "quantity": 2,
+          "disabled": true,
+          "image": "assets/images/slide2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "veg"
+        },
+        {
+          "name": "Cauliflower",
+          "price": "25",
+          "category": "veg",
+          "quantity": 2,
+          "description": "about the products",
+          "image": "assets/images/image1.webp",
+          "id": 2,
+          "disabled": true
+        }
+      ],
+      "id": 4
+    },
+    {
+      "user": [
+        {
+          "email": "hemalathanarayanan01@gmail.com",
+          "pword": "Hema@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "id": 3,
+          "name": "Potato",
+          "price": 20,
+          "quantity": 1,
+          "disabled": true,
+          "image": "assets/images/slide2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "veg"
+        },
+        {
+          "name": "Cauliflower",
+          "price": "25",
+          "category": "veg",
+          "quantity": "1",
+          "description": "about the products",
+          "image": "assets/images/image1.webp",
+          "id": 2,
+          "disabled": true
+        }
+      ],
+      "id": 5
+    },
+    {
+      "user": [
+        {
+          "email": "hemalathanarayanan01@gmail.com",
+          "pword": "Hema@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "id": 3,
+          "name": "Potato",
+          "price": 20,
+          "quantity": 1,
+          "disabled": true,
+          "image": "assets/images/slide2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "veg"
+        }
+      ],
+      "id": 6
+    },
+    {
+      "user": [
+        {
+          "email": "abinayasri@gmail.com",
+          "pword": "Abil@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "id": 3,
+          "name": "Potato",
+          "price": 20,
+          "quantity": 1,
+          "disabled": true,
+          "image": "assets/images/slide2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "veg"
+        },
+        {
+          "id": 11,
+          "name": "Papaya",
+          "price": 37,
+          "quantity": 1,
+          "disabled": true,
+          "image": "assets/images/papaya-fruit-isolated.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "fruit"
+        },
+        {
+          "id": 14,
+          "name": "Blueberry",
+          "price": 89,
+          "quantity": 2,
+          "disabled": true,
+          "image": "assets/images/slide7.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "fruit"
+        }
+      ],
+      "id": 7
+    },
+    {
+      "user": [
+        {
+          "email": "sudharsan25252@gmail.com",
+          "pword": "Sudha@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "id": 3,
+          "name": "Potato",
+          "price": 20,
+          "quantity": 2,
+          "disabled": true,
+          "image": "assets/images/slide2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "veg"
+        },
+        {
+          "name": "Cauliflower",
+          "price": "25",
+          "category": "veg",
+          "quantity": 2,
+          "description": "about the products",
+          "image": "assets/images/image1.webp",
+          "id": 2,
+          "disabled": true
+        },
+        {
+          "id": 1,
+          "name": "Tomato",
+          "price": "15",
+          "quantity": "1",
+          "disabled": false,
+          "description": "",
+          "image": "assets/images/tomatoes.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "veg"
+        }
+      ],
+      "id": 8
+    },
+    {
+      "user": [
+        {
+          "email": "hemalathanarayanan01@gmail.com",
+          "pword": "Hema@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "id": 3,
+          "name": "Potato",
+          "price": 20,
+          "quantity": 1,
+          "disabled": true,
+          "image": "assets/images/slide2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "veg"
+        },
+        {
+          "name": "Cauliflower",
+          "price": "25",
+          "category": "veg",
+          "quantity": "1",
+          "description": "about the products",
+          "image": "assets/images/image1.webp",
+          "id": 2,
+          "disabled": true
+        }
+      ],
+      "id": 9
+    },
+    {
+      "user": [
+        {
+          "email": "hemalathanarayanan01@gmail.com",
+          "pword": "Hema@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "id": 3,
+          "name": "Potato",
+          "price": 20,
+          "quantity": 2,
+          "disabled": true,
+          "image": "assets/images/slide2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "veg"
+        },
+        {
+          "name": "Cauliflower",
+          "price": "25",
+          "category": "veg",
+          "quantity": "1",
+          "description": "about the products",
+          "image": "assets/images/image1.webp",
+          "id": 2
+        }
+      ],
+      "id": 10
+    },
+    {
+      "user": [
+        {
+          "email": "sudharsan25252@gmail.com",
+          "pword": "Sudha@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "name": "Raddish",
+          "price": "25",
+          "category": "veg",
+          "quantity": 2,
+          "description": "about the product",
+          "image": "assets/images/image2.jpg",
+          "id": 4,
+          "disabled": true
+        },
+        {
+          "id": 6,
+          "name": "Lady's Finger",
+          "price": 53,
+          "quantity": 1,
+          "disabled": true,
+          "image": "assets/images/slide3.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "veg"
+        },
+        {
+          "id": 20,
+          "name": "Atta",
+          "price": 471,
+          "quantity": 1,
+          "disabled": true,
+          "image": "assets/images/wheat.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "grains"
+        }
+      ],
+      "id": 11
+    },
+    {
+      "user": [
+        {
+          "email": "priya@gmail.com",
+          "pword": "Priya@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "id": 17,
+          "name": "Cheese",
+          "price": 70,
+          "quantity": 2,
+          "disabled": true,
+          "image": "assets/images/cheddar-cheese-dark-wooden-surface.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "Dairy"
+        },
+        {
+          "id": 16,
+          "name": "Milk",
+          "price": 35,
+          "quantity": 1,
+          "disabled": true,
+          "image": "assets/images/fresh-milk-mug-jug-wooden-table.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "Dairy"
+        },
+        {
+          "id": 21,
+          "name": "Peanut",
+          "price": 150,
+          "quantity": 1,
+          "disabled": true,
+          "image": "assets/images/peanut.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "grains"
+        },
+        {
+          "id": 19,
+          "name": "Rice",
+          "price": 70,
+          "quantity": 2,
+          "disabled": true,
+          "image": "assets/images/rice.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "grains"
+        }
+      ],
+      "id": 12
+    },
+    {
+      "user": [
+        {
+          "email": "shreya@gmail.com",
+          "pword": "Shreya@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "id": 11,
+          "name": "Papaya",
+          "price": 37,
+          "quantity": 2,
+          "disabled": true,
+          "image": "assets/images/papaya-fruit-isolated.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "fruit"
+        },
+        {
+          "name": "Pomegranate",
+          "price": "87",
+          "category": "fruit",
+          "quantity": "1",
+          "description": "about the product",
+          "image": "assets/images/exotic-delicious-pomegranate-white-background.jpg",
+          "id": 12,
+          "disabled": true
+        },
+        {
+          "id": 13,
+          "name": "Orange",
+          "price": 48,
+          "quantity": 1,
+          "disabled": true,
+          "image": "assets/images/fresh-orange-isolated-white-back.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "fruit"
+        },
+        {
+          "id": 9,
+          "name": "Kiwi",
+          "price": 80,
+          "quantity": 2,
+          "disabled": true,
+          "image": "assets/images/fresh-kiwi-fruit-isolated.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "fruit"
+        }
+      ],
+      "id": 13
     }
   ]
 }

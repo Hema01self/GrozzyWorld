@@ -24,18 +24,19 @@
     <div class="product-quantity">
 <label style="padding-left: 10px;color: #333;">Quantity:</label>
      <ng-container *ngIf="cart.includes(product)">
-      <div class="quantity-input"><input type="number" [(ngModel)]="product.quantity" min="1" [disabled]="false" /></div>
+      <div class="quantity-input"><input type="number" [(ngModel)]="product.quantity" min="1" max="10" [disabled]="false" /></div>
     </ng-container>
     <ng-container *ngIf="!cart.includes(product)">
-      <div class="quantity-input"><input type="number" [(ngModel)]="product.quantity" min="1" [disabled]="true" /></div>
+      <div class="quantity-input"><input type="number" [(ngModel)]="product.quantity" min="1" max="10" [disabled]="true" /></div>
     </ng-container>
   </div>
   </div>
-    <div class="add-to-cart"><button (click)="addToCart(product)"  *ngIf="usercount===1" class="add-to-cart-button">ADD TO CART</button>
+    <div class="add-to-cart">
+      <button (click)="addToCart(product)"  *ngIf="usercount===1 && !cart.includes(product)"   class="add-to-cart-button">ADD TO CART</button>
       <button (click)="alertUser()"  *ngIf="usercount===0" class="add-to-cart-button">ADD TO CART</button>
       </div>
     <div class="added-to-cart"><span style="  color: #56CCF2;
-    font-weight: bold;"   *ngIf="cart.includes(product)">ADDED TO CART</span></div>
+    font-weight: bold;"   *ngIf="cart.includes(product) && !cartService.isProductInCart(product)">ADDED TO CART</span></div>
     </div>
   </div>
   </div>

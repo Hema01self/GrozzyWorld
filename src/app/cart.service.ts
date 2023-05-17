@@ -7,25 +7,24 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class CartService {
+  private storageKey = 'cartItems';
   items: Product[] = [];
 
   cartItemCount = new BehaviorSubject(0); //it return observable we can use whereever by using subscribe
-  constructor(private http: HttpClient) {}
-  addToCart(product: Product) {
-    //here the Product specifies the datatype of variables that mentioned in Product Interface
-
+  constructor(private http: HttpClient) {  this.loadCartItems();}
+  addToCart(product: Product) { //here the Product specifies the datatype of variables that mentioned in Product Interface
+    let itemIndex = this.items.findIndex((item) => item.name === product.name);
+    if (itemIndex !== -1) {
+      this.items[itemIndex].quantity += product.quantity;
+    }else{
       this.items.push(product); // push->push the item to cart
-
+    }
     this.cartItemCount.next(this.cartItemCount.value + 1); // next->data is passed where ever subscribed
-    // this.saveCartToDatabase().subscribe(
-      // response => console.log('Cart items saved to db.json'),
-      // error => console.error('Failed to save cart items:', error)
-    // );
+    this.updateCartItemCount();
+    this.saveCartItems();
 
   }
-  // saveCartToDatabase() {
-    // return this.http.post('http://localhost:3000/cart', this.items);
-  // }
+
 
   getCartCount() {
     return this.cartItemCount.asObservable();
@@ -35,12 +34,17 @@ export class CartService {
     if (index > -1) {
       this.items.splice(index, 1);
       this.cartItemCount.next(this.items.length);
-
+      this.updateCartItemCount();
+      this.saveCartItems();
     }
   }
   getItems() {
     return this.items;
   }
+  isProductInCart(product: Product): boolean {
+    return this.items.some((item) => item.name === product.name);
+  }
+
   emptyCart() {
     this.items = [];
     this.cartItemCount.next(0);
@@ -48,5 +52,19 @@ export class CartService {
     return this.items;
   }
 
+  private updateCartItemCount() {
+    this.cartItemCount.next(this.items.length);
+  }
 
+  private saveCartItems() {
+    localStorage.setItem(this.storageKey, JSON.stringify(this.items));
+  }
+
+  private loadCartItems() {
+    const storedItems = localStorage.getItem(this.storageKey);
+    if (storedItems) {
+      this.items = JSON.parse(storedItems);
+      this.updateCartItemCount();
+    }
+  }
 }
