@@ -48,10 +48,15 @@ export class CartService {
   emptyCart() {
     this.items = [];
     this.cartItemCount.next(0);
-
+    this.updateCartItemCount();
+    this.saveCartItems();
     return this.items;
   }
-
+  clearCart() {
+    this.items = [];
+    this.cartItemCount.next(0);
+    this.saveCartItems();
+  }
   private updateCartItemCount() {
     this.cartItemCount.next(this.items.length);
   }

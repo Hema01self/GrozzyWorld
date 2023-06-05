@@ -884,6 +884,31 @@
         }
       ],
       "id": 13
+    },
+    {
+      "user": [
+        {
+          "email": "hemalathanarayanan01@gmail.com",
+          "pword": "Hema@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "id": 14,
+          "name": "Blueberry",
+          "price": 89,
+          "quantity": 1,
+          "disabled": true,
+          "image": "assets/images/slide7.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "fruit"
+        }
+      ],
+      "id": 14
     }
   ]
 }

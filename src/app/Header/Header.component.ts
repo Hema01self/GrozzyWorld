@@ -55,6 +55,7 @@ logout(){
       alert("Successfully logged out");
       this.usercount = 0;
       localStorage.removeItem('currentUser');
+      this.cartService.clearCart();
       this.route.navigate(['/login']);
     });
   }

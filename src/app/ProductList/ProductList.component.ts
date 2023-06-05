@@ -21,6 +21,7 @@ export class ProductListComponent implements OnInit {
   public totalItem: number = 0;
   public usercount:number=0;
   users:any=[];
+  user:any=[];
   constructor(
     public cartService: CartService,
     private authService: AuthService,
@@ -43,6 +44,11 @@ export class ProductListComponent implements OnInit {
     this.userService.getUserCount().subscribe((usertotal)=>{
       this.usercount=usertotal;
     });
+    const storedUser = localStorage.getItem('currentUser');
+    if (storedUser) {
+      this.user = JSON.parse(storedUser);
+      this.usercount = 1;
+    }
     // this.isLoggedIn = this.authService.isLoggedIn;
     // console.log('login status in productlist.ts ' + this.isLoggedIn);
   }
