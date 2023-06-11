@@ -24,7 +24,6 @@
 
 }
 .form{
-
 margin: 0 auto;
 max-width: 16rem;
 overflow: hidden;
@@ -32,12 +31,9 @@ overflow: hidden;
 
 .form-control {
   padding-bottom: 30px;
-
-
 }
 .form-control input {
   border: 1px solid transparent;
-
   border-bottom-color: white;
   background-color: transparent;
   color: white;
@@ -59,7 +55,6 @@ letter-spacing: 2px;
 
    .form-control small {
     color: #e74c3c;
-
     bottom: 0;
     left: 0;
     position:relative;

@@ -17,18 +17,9 @@ export class RegisterComponent implements OnInit {
   ) {}
   loginForm1 = this.fb.group(
     {
-      username: [
-        '',
-        [
-          Validators.required,
-          Validators.pattern('^[A-Za-zs]+$'),
-          Validators.minLength(3),
-        ],
-      ],
-      emailid: ['', [Validators.required, Validators.email]],
+      username: ['',[Validators.required,Validators.pattern('^[A-Za-zs]{3,30}$'),Validators.min(3)]],
+      emailid: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')]],
       phone: ['', [Validators.required, Validators.pattern('[6-9]\\d{9}')]],
-      // address:["",[Validators.required,Validators.minLength(5)]],
-      // pincode:["",[Validators.required,Validators.pattern(/^\d{6}$/)]],
       password: ['',
         [
           Validators.required,
@@ -44,8 +35,6 @@ export class RegisterComponent implements OnInit {
   username: any = '';
   emailid: any = '';
   phone: any = '';
-  // address:any="";
-  // pincode:any="";
   password: any = '';
   cpassword: any = '';
 
@@ -53,18 +42,16 @@ export class RegisterComponent implements OnInit {
 
   }
   submitForm() {
-   
+
     var body = {
       uname: this.username,
       email: this.emailid,
       phoneno: this.phone,
-      // add:this.address,
-      // pcode:this.pincode,
       pword: this.password,
       cword: this.cpassword,
     };
     this.userService.addUserInfo(body).subscribe((data) => {
-      alert('Registererd Successfully');
+      alert('Registered Successfully');
       this.loginForm1.reset();
       this.route.navigate(['/', 'login']);
     });

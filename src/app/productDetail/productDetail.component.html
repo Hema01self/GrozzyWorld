@@ -1,0 +1,22 @@
+<app-Header></app-Header>
+<div class="section">
+<div class="button">
+<button routerLink="/product">Go Back</button>
+</div>
+<div *ngIf="productData" class="product-details">
+<div>
+ <img src="{{productData?.image}}"><!--property binding -->
+</div>
+<div class="column">
+  <div class="details">
+    <h2>{{productData.name}}</h2>
+    <h3><span style="color: #dd5e89">Price : </span>{{productData.price | currency:'INR'}}</h3>
+    <h3><span style="color: #dd5e89">weight: </span>{{productData.weight}}</h3>
+    <h3><span style="color: #dd5e89">Rating: </span>{{productData.rating}}</h3>
+    <h3><span style="color: #dd5e89">Category: </span>{{productData.category}}</h3>
+
+  </div>
+</div>
+</div>
+</div>
+<app-Footer></app-Footer>

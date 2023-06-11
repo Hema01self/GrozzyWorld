@@ -53,19 +53,18 @@ header nav li a {
       rgba(255, 0, 180, 1),
       rgba(0, 100, 200, 1)
     );
-  background-size: 100% 5px, 0 3px; /* size of the line */
-  background-position: 100% 100%, 0 100%; /* position of the line */
-  background-repeat: no-repeat; /* for the size only visible single line */
-  transition: background-size 400ms;
+  background-size: 100% 5px, 0 3px; /*1st gradient height of 5px(100%width),2nd 3px &  */
+  background-position: 100% 100%, 0 100%; /* 1st gradient bottom-right corner & 2nd bottom-left corner  */
+  background-repeat: no-repeat; /*single instance of each grad */
+ transition: background-size 400ms; /* 0.4s */
 }
 
 header nav li a:hover {
-  background-size: 0 3px,50% 3px;
+  background-size: 0 3px, 50% 3px;
 }
 header nav ul li ul {
   position: absolute;
   left: 0;
-
   background: #fff;
   display: none;
 }
@@ -74,26 +73,8 @@ header nav ul li {
 }
 header nav ul li ul li {
   width: 100%;
- padding: 0px;
+  padding: 0px;
 }
-.fa-shopping-cart {
-  font-size: 2rem;
-  color: #000000;
-  margin-top: 15px;
-  }
-   .badge {
-    position: absolute;
-
-  margin-top: 5px;
-    background-color: #FF0000;
-    color: #FFFFFF;
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 4px;
-    border-radius: 50%;
-  }
-
-  .active-page a {
-    font-weight: bolder;
- 
-  }
+.active-page a {
+  font-weight: 800;
+}

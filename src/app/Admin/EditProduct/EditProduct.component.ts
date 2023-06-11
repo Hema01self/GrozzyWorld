@@ -12,7 +12,7 @@ import { ProductApiService } from 'src/app/product-api.service';
 })
 export class EditProductComponent implements OnInit {
   productMessage: undefined | string;
-  productData: undefined | Product;
+  productData: any|Product;
   constructor(
     private productApiService: ProductApiService,private route:ActivatedRoute) { }
 
@@ -26,7 +26,6 @@ export class EditProductComponent implements OnInit {
     })
   }
 submit(data:any){
-
 if(this.productData){
   data.id=this.productData.id;
 }

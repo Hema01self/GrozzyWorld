@@ -93,12 +93,44 @@
 
         <div class="payment-right">
           <span style="font-weight: bold;padding-left: 9px;margin-top:10px ;">Add Credit/Debit Card</span>
-          <form>
-            <div class = "payment-field"><input type="tel" placeholder="Enter card number"></div>
+          <form [formGroup]="deliveryForm">
+            <!-- <div class = "payment-field"><input type="tel" placeholder="Enter card number"></div>
             <div  class = "payment-field"><input placeholder="MM/YY"></div>
             <div class = "payment-field"><input placeholder="CVV"></div>
-            <div class="delivery-button-position"><button class="delivery-button" [disabled]="!DeliveryForm.form.valid" (click)="alert()">PROCEED TO PAY</button></div>
+            <div class="delivery-button-position"><button class="delivery-button" [disabled]="!DeliveryForm.form.valid" (click)="alert()">PROCEED TO PAY</button></div>-->
+            <div class="payment-field">
+              <input type="tel" placeholder="Enter card number" formControlName="cardNumber">
+              <div *ngIf="deliveryForm.get('cardNumber')?.errors?.['required'] && deliveryForm.get('cardNumber')?.touched" class="error-message">
+                Card number is required.
+              </div>
+              <div *ngIf="deliveryForm.get('cardNumber')?.errors?.['pattern'] && deliveryForm.get('cardNumber')?.touched" class="error-message">
+                Card number must be 16 digits long.
+              </div>
+            </div>
 
+            <div class="payment-field">
+              <input placeholder="MM/YY" formControlName="expiry">
+              <div *ngIf="deliveryForm.get('expiry')?.errors?.['required'] && deliveryForm.get('expiry')?.touched" class="error-message">
+                Expiry date is required.
+              </div>
+              <div *ngIf="deliveryForm.get('expiry')?.errors?.['pattern'] && deliveryForm.get('expiry')?.touched" class="error-message">
+                Expiry date must be in the format MM/YY.
+              </div>
+            </div>
+
+            <div class="payment-field">
+              <input placeholder="CVV" formControlName="cvv">
+              <div *ngIf="deliveryForm.get('cvv')?.errors?.['required'] && deliveryForm.get('cvv')?.touched" class="error-message">
+                CVV is required.
+              </div>
+              <div *ngIf="deliveryForm.get('cvv')?.errors?.['pattern'] && deliveryForm.get('cvv')?.touched" class="error-message">
+                CVV must be 3 digits long.
+              </div>
+            </div>
+
+            <div class="delivery-button-position">
+              <button class="delivery-button" [disabled]="!deliveryForm.valid" (click)="alert()">PROCEED TO PAY</button>
+            </div>
           </form>
         </div>
 

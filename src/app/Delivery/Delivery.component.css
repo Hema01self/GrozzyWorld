@@ -57,6 +57,15 @@ label{
 {
   padding: 10px;
 }
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.delivery-button:disabled {
+  background-color: #827e7e;
+  cursor: not-allowed;
+}
 table{
   border-collapse: collapse;
   width: 100%;

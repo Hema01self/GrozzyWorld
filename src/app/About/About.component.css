@@ -3,32 +3,9 @@
   background-color: rgb(255, 255, 255, 0.8);
   font-family: 'Poppins', sans-serif;
 }
- /* .cards {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../../assets/images/home_fruit.png);
-  background-position: center;
-  background-size: cover;
-  padding-top: 17rem;
-  padding-bottom: 10rem;
-  /* background - image: url("../../assets/images/back2.jpg");
-}
-/* .cards{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-position: center;
-  padding-top: 17rem;
-  padding-bottom: 10rem;
-  background-size: 100%;
-background-size: cover;
-background-image: url("../../assets/images/home_fruit.png");
-}*/
 .cards img{
   max-width: 84.15rem;
   max-height:30rem;
-  color: rgba(0, 0, 0,0.5);
 }
 .about-flex{
   display: flex;
@@ -39,7 +16,6 @@ background-image: url("../../assets/images/home_fruit.png");
 .content {
   margin: 30px;
   text-align: justify;
-
 }
 .about-emoji{
   display: grid;
@@ -61,22 +37,17 @@ background-image: url("../../assets/images/home_fruit.png");
   padding: 13px;
   font-size: 23px;
   font-weight: bold;
-
 }
 .about-grids:hover{
-
   color:rgba(70, 68, 68,0.8);
 }
-
 .about-review{
   display: flex;
-
 }
 .review-header{
   text-align: center;
 }
 .about-review1{
-
   padding:20px;
   margin:20px;
   font-size: 15px;

@@ -32,15 +32,19 @@
       <a routerLink="/login" class="links"><i class="fa fa-arrow-right"></i> Sign In</a>
 
     </div>
-
     <div class="box">
       <h3>Newsletter</h3>
       <p>Subsribe For Latest Updates</p>
-      <input type="email" placeholder="Your Email" class="email">
-      <input type="submit" value="Subscribe" class="button">
+      <form #newsForm="ngForm" (submit)="onSubmit()">
+      <input type="email" placeholder="Your Email" class="email"  name="email" #mailid=ngModel [(ngModel)]="email" required="" pattern="^(([^<>()\[\]\\.,;:\s@']+(\.[^<>()\[\]\\.,;:\s@']+)*)|('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$">
+      <div class="small-text" *ngIf="mailid.errors && (mailid.dirty || mailid.touched)">
+        <div [hidden]="!mailid.errors['required']" style="font-size: 10px; color: red;">Please enter email id</div>
+        <div [hidden]="!mailid.errors['pattern']" style="font-size: 10px; color: red;">Please enter valid email id</div>
+      </div>
+      <input type="submit" [disabled]="!newsForm.form.valid" value="Subscribe" class="button">
+    </form>
       <img src="assets/images/payment-removebg-preview.png" width="400px">
     </div>
-
   </div>
 
 </footer>

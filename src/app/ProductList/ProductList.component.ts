@@ -3,8 +3,7 @@ import { CartService } from '../cart.service';
 import { Product } from '../Product';
 import { AuthService } from '../auth.service';
 import { Observable } from 'rxjs';
-import { ActivatedRoute, Router } from '@angular/router';
-import { AuthGuard } from '../auth.guard';
+import {  Router } from '@angular/router';
 import { ProductApiService } from '../product-api.service';
 import { UserService } from '../user.service';
 
@@ -14,14 +13,15 @@ import { UserService } from '../user.service';
   styleUrls: ['./ProductList.component.css'],
 })
 export class ProductListComponent implements OnInit {
-
+  user:any=[];
   products: Product[] = [];
   cart: Product[] = [];
   public filterCategory: any;
   public totalItem: number = 0;
   public usercount:number=0;
   users:any=[];
-  user:any=[];
+
+
   constructor(
     public cartService: CartService,
     private authService: AuthService,
@@ -30,7 +30,6 @@ export class ProductListComponent implements OnInit {
     private userService:UserService
   ) {
     this.cart = this.cartService.getItems();
-    // this.isLoggedIn =authService.isLoggedIn;
     this.userService.getCurrentUser().subscribe(user=>this.users=user);
   }
   ngOnInit(): void {
@@ -49,9 +48,8 @@ export class ProductListComponent implements OnInit {
       this.user = JSON.parse(storedUser);
       this.usercount = 1;
     }
-    // this.isLoggedIn = this.authService.isLoggedIn;
-    // console.log('login status in productlist.ts ' + this.isLoggedIn);
-  }
+
+    }
 
   addToCart(product: Product) {
     if (this.cartService.isProductInCart(product)) {
@@ -61,7 +59,8 @@ export class ProductListComponent implements OnInit {
       window.alert('Added to cart');
       console.log(product);
       product.disabled = true;
-    }
+
+       }
   }
   getGrandTotal() {
     let grandTotal = 0;
@@ -80,9 +79,10 @@ export class ProductListComponent implements OnInit {
   }
 
   alertUser() {
-    alert('Please login to Add to cart');
+    alert('Please login to add products');
     this.route.navigate(['/login']);
   }
 
-  //
+
+
 }

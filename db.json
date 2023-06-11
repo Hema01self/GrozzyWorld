@@ -49,7 +49,7 @@
     },
     {
       "uname": "Sudharsan",
-      "email": "sudharsan25252@gmail.com",
+      "email": "sudharsan@gmail.com",
       "phoneno": "9360680678",
       "pword": "Sudha@123",
       "cword": "Sudha@123",
@@ -62,6 +62,14 @@
       "pword": "Shreya@123",
       "cword": "Shreya@123",
       "id": 7
+    },
+    {
+      "uname": "Shadhvik",
+      "email": "shadhvik@gmail.com",
+      "phoneno": "7890345677",
+      "pword": "Shadhvik@123",
+      "cword": "Shadhvik@123",
+      "id": 8
     }
   ],
   "current-user": [],
@@ -101,46 +109,51 @@
   ],
   "products": [
     {
-      "id": 1,
       "name": "Tomato",
       "price": "15",
       "quantity": "1",
-      "disabled": false,
-      "description": "",
+      "disabled": "false",
       "image": "assets/images/tomatoes.jpg",
-      "detail": "about the product",
+      "detail": "",
       "weight": "1kg",
-      "rating": 5,
-      "category": "veg"
+      "rating": "5",
+      "category": "veg",
+      "id": 1
     },
     {
       "name": "Cauliflower",
       "price": "25",
-      "category": "veg",
       "quantity": "1",
-      "description": "about the products",
+      "disabled": "false",
       "image": "assets/images/image1.webp",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": "5",
+      "category": "veg",
       "id": 2
     },
     {
-      "id": 3,
       "name": "Potato",
-      "price": 20,
-      "quantity": 1,
-      "disabled": false,
+      "price": "20",
+      "quantity": "1",
+      "disabled": "false",
       "image": "assets/images/slide2.jpg",
       "detail": "about the product",
       "weight": "1kg",
-      "rating": 5,
-      "category": "veg"
+      "rating": "5",
+      "category": "veg",
+      "id": 3
     },
     {
       "name": "Raddish",
       "price": "25",
-      "category": "veg",
       "quantity": "1",
-      "description": "about the product",
+      "disabled": "false",
       "image": "assets/images/image2.jpg",
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": "5",
+      "category": "veg",
       "id": 4
     },
     {
@@ -168,13 +181,16 @@
       "category": "veg"
     },
     {
+      "id": 7,
       "name": "Carrot",
-      "price": "35",
-      "category": "veg",
-      "quantity": "1",
-      "description": "about the product is carrot",
+      "price": 35,
+      "quantity": 1,
+      "disabled": false,
       "image": "assets/images/slide5.jpg",
-      "id": 7
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "veg"
     },
     {
       "id": 8,
@@ -225,13 +241,16 @@
       "category": "fruit"
     },
     {
+      "id": 12,
       "name": "Pomegranate",
-      "price": "87",
-      "category": "fruit",
-      "quantity": "1",
-      "description": "about the product",
+      "price": 87,
+      "quantity": 1,
+      "disabled": false,
       "image": "assets/images/exotic-delicious-pomegranate-white-background.jpg",
-      "id": 12
+      "detail": "about the product",
+      "weight": "1kg",
+      "rating": 5,
+      "category": "fruit"
     },
     {
       "id": 13,
@@ -318,16 +337,16 @@
       "category": "grains"
     },
     {
-      "id": 20,
       "name": "Atta",
-      "price": 471,
-      "quantity": 1,
-      "disabled": false,
+      "price": 470,
+      "quantity": "1",
+      "disabled": "false",
       "image": "assets/images/wheat.jpg",
-      "detail": "about the product",
+      "description": "about the product",
       "weight": "1kg",
-      "rating": 5,
-      "category": "grains"
+      "rating": "5",
+      "category": "grains",
+      "id": 20
     },
     {
       "id": 21,
@@ -342,13 +361,16 @@
       "category": "grains"
     },
     {
+      "id": 22,
       "name": "Urad dal",
-      "price": "135",
+      "price": 135,
       "category": "grains",
-      "quantity": "1",
-      "description": "about the product",
+      "quantity": 1,
+      "disabled": false,
+      "detail": "about the product",
       "image": "assets/images/urad-dal.jpg",
-      "id": 22
+      "weight": "1kg",
+      "rating": 5
     }
   ],
   "order": [
@@ -909,6 +931,242 @@
         }
       ],
       "id": 14
+    },
+    {
+      "user": [
+        {
+          "email": "hemalathanarayanan01@gmail.com",
+          "pword": "Hema@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "name": "Raddish",
+          "price": "25",
+          "quantity": "1",
+          "disabled": true,
+          "image": "assets/images/image2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 4
+        }
+      ],
+      "id": 15
+    },
+    {
+      "user": [
+        {
+          "email": "sudharsan@gmail.com",
+          "pword": "Sudha@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "name": "Potato",
+          "price": "20",
+          "quantity": "1",
+          "disabled": true,
+          "image": "assets/images/slide2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 3
+        }
+      ],
+      "id": 16
+    },
+    {
+      "user": [
+        {
+          "email": "hemalathanarayanan01@gmail.com",
+          "pword": "Hema@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "name": "Raddish",
+          "price": "25",
+          "quantity": "1",
+          "disabled": true,
+          "image": "assets/images/image2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 4
+        }
+      ],
+      "id": 17
+    },
+    {
+      "user": [
+        {
+          "email": "hemalathanarayanan01@gmail.com",
+          "pword": "Hema@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "name": "Raddish",
+          "price": "25",
+          "quantity": "1",
+          "disabled": "false",
+          "image": "assets/images/image2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 4
+        },
+        {
+          "name": "Potato",
+          "price": "20",
+          "quantity": "1",
+          "disabled": true,
+          "image": "assets/images/slide2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 3
+        }
+      ],
+      "id": 18
+    },
+    {
+      "user": [
+        {
+          "email": "sudharsan@gmail.com",
+          "pword": "Sudha@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "name": "Raddish",
+          "price": "25",
+          "quantity": 2,
+          "disabled": true,
+          "image": "assets/images/image2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 4
+        },
+        {
+          "name": "Potato",
+          "price": "20",
+          "quantity": 3,
+          "disabled": true,
+          "image": "assets/images/slide2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 3
+        }
+      ],
+      "id": 19
+    },
+    {
+      "user": [
+        {
+          "email": "hemalathanarayanan01@gmail.com",
+          "pword": "Hema@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "name": "Potato",
+          "price": "20",
+          "quantity": 3,
+          "disabled": true,
+          "image": "assets/images/slide2.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 3
+        }
+      ],
+      "id": 20
+    },
+    {
+      "user": [
+        {
+          "email": "shadhvik@gmail.com",
+          "pword": "Shadhvik@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "id": 17,
+          "name": "Cheese",
+          "price": 70,
+          "quantity": 1,
+          "disabled": true,
+          "image": "assets/images/cheddar-cheese-dark-wooden-surface.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "Dairy"
+        },
+        {
+          "id": 16,
+          "name": "Milk",
+          "price": 35,
+          "quantity": 4,
+          "disabled": true,
+          "image": "assets/images/fresh-milk-mug-jug-wooden-table.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "Dairy"
+        }
+      ],
+      "id": 21
+    },
+    {
+      "user": [
+        {
+          "email": "hemalathanarayanan01@gmail.com",
+          "pword": "Hema@123",
+          "userType": "user",
+          "id": 1
+        }
+      ],
+      "items": [
+        {
+          "id": 12,
+          "name": "Pomegranate",
+          "price": 87,
+          "quantity": 2,
+          "disabled": true,
+          "image": "assets/images/exotic-delicious-pomegranate-white-background.jpg",
+          "detail": "about the product",
+          "weight": "1kg",
+          "rating": 5,
+          "category": "fruit"
+        }
+      ],
+      "id": 22
     }
   ]
 }

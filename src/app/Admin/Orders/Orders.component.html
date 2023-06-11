@@ -16,7 +16,6 @@
     <div *ngFor="let user of orderItem.user">
       <h3>User Details: </h3>
       <p style="color: #dd5e89;">Email : {{ user.email }}</p>
-      <!-- <p>ID: {{ user.id }}</p> -->
     </div>
     <h3>Item Details:</h3>
     <div *ngFor="let item of orderItem.items" class="grid grid-three-columns">
@@ -28,41 +27,6 @@
       <p>Category : {{ item.category }}</p>
     </div>
   </div>
-  <!-- <div class="cart-table">
-    <div *ngIf="orders.length>0">
-    <table>
-      <thead>
-        <tr>
-
-          <th>Product Name</th>
-          <th>Product Image</th>
-          <th>Price</th>
-          <th>Quantity</th>
-
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of orders">
-
-
-          <td>{{item.name}}</td>
-          <td><img [src]="item.image" width="100px" height="100px"></td>
-          <td>
-            <p> {{item.price|currency:'INR'}}</p>
-          </td>
-          <td> {{item.quantity}}</td>
-</tr>
-      </tbody>
-    </table>
-
-<div class="total"><h3>Grand Total: {{getGrandTotal()|currency:'INR'}}</h3></div>
-</div>
-<div *ngIf="orders.length===0">
-  <div class="cart-image"><img src="assets/images/empty-cart.png"></div>
-<div class="order"><h3>No orders available</h3></div>
-</div>
-</div>
-<img src="assets/images/home_fruit.png" width="1147px">-->
 <div *ngIf="orders.length===0">
   <div class="cart-image"><img src="assets/images/empty-cart.png"></div>
 <div class="order"><h3>No orders available</h3></div>

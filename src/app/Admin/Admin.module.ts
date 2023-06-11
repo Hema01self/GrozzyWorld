@@ -16,11 +16,23 @@ import { EditProductComponent } from './EditProduct/EditProduct.component';
 
 @NgModule({
   imports: [
-    CommonModule,RouterModule,HttpClientModule,FormsModule,ReactiveFormsModule],
-  declarations: [AdminComponent,
-  DashboardComponent,AdminHomeComponent,
-ProductsComponent,CategoriesComponent,OrdersComponent,CustomersComponent,
-QuriesComponent,UpdateProductComponent,EditProductComponent]
-
+    CommonModule,
+    RouterModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+  declarations: [
+    AdminComponent,
+    DashboardComponent,
+    AdminHomeComponent,
+    ProductsComponent,
+    CategoriesComponent,
+    OrdersComponent,
+    CustomersComponent,
+    QuriesComponent,
+    UpdateProductComponent,
+    EditProductComponent,
+  ],
 })
-export class AdminModule { }
+export class AdminModule {}

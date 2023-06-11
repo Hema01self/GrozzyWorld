@@ -39,6 +39,14 @@ return this.client.post<User>(dbUrl,user).pipe(
   })
 );
 }
+ currentAdmin(admin:User): Observable<User>{
+  const adminUrl="http://localhost:3000/admin";
+   return this.client.post<User>(adminUrl,admin).pipe(
+    tap((loggedInUser: User) => {
+      localStorage.setItem('currentAdmin', JSON.stringify(loggedInUser));
+    })
+   )
+ }
 getUserCount(){
   return this.userCount.asObservable();;
 }

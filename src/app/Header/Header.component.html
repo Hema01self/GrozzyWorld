@@ -6,39 +6,14 @@
       <li routerLinkActive="active-page"><a routerLink="/about">About</a></li>
       <li routerLinkActive="active-page"><a routerLink="/product">Shop</a>
         <ul>
-          <!-- <li><a routerLink="categories">Categories</a></li> -->
           <li routerLinkActive="active-page"><a routerLink="/product">Product</a></li>
           <li routerLinkActive="active-page"><a routerLink="/cart">Cart</a></li>
         </ul>
       </li>
-      <!-- <li><i class="fa fa-shopping-cart cart-icon" routerLink="/cart"></i>
-      <span class="badge">{{totalItem}}</span></li>-->
-      <!-- <li><a routerLink="contact">Contact</a></li> -->
       <li routerLinkActive="active-page">
         <a *ngIf="usercount===0" routerLink="/login">Login</a>
         <a *ngIf="usercount===1" (click)="logout()">Logout</a>
-
       </li>
-      <!-- <ng-container *ngIf="isLoggedIn(); else loggedOutSection">
-        <button (click)="logout()">Logout</button>
-      </ng-container>
-      <ng-template #loggedOutSection>
-        <button (click)="route.navigate(['/login'])">Login</button>
-      </ng-template> -->
-
-
-        <!-- <a ><li  *ngFor="let user of users" (click)="removeUser(user.id)">.</li></a> -->
-
-      <!-- <ng-container *ngFor="let user of users">
-        <li><a *ngIf="usercount===0" routerLink="/login">Login</a>
-        <a *ngIf="usercount===1" (click)="removeUser(user.id)">Logout</a></li>
-      </ng-container>-->
-
-      <!-- <li ><a routerLink="/admin/dashboard">Dashboard</a></li> -->
-
-      <!-- <li  [hidden]="loginStatus" (click)="logIn()"><a routerLink="/login">Login</a></li>
-<li [hidden]="!loginStatus" (click)="logOut()">Logout</li>-->
-
     </ul>
   </nav>
 </Header>

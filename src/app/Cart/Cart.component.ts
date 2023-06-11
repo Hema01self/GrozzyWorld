@@ -35,9 +35,6 @@ export class CartComponent implements OnInit {
     });
     return grandTotal;
   }
-  deleteItem(itemIndex: number) {
-    this.cartItems.splice(itemIndex, 1);
-  }
 
   emptyCart() {
     this.cartService.emptyCart();
@@ -77,5 +74,9 @@ export class CartComponent implements OnInit {
         console.error('Falied to fetch user details', error);
       }
     );
+  }
+ 
+  updateQuantity(product: Product, quantity: number) {
+    this.cartService.updateQuantity(product, quantity);
   }
 }

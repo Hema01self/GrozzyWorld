@@ -9,7 +9,6 @@ import { HttpClient } from '@angular/common/http';
 export class ContactComponent implements OnInit {
 
 username:any="";
-
 contactno:any="";
 email:any="";
 subject:any="";

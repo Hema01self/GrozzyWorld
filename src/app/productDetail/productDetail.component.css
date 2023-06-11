@@ -1,0 +1,29 @@
+.product-details{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.button{
+  padding: 40px 0 0 40px;
+}
+button{
+  padding: 10px;
+  background: #0085ba;
+  color:white;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+}
+img{
+  width: 100%;
+  height: 300px;
+  padding: 40px 40px;
+  object-fit: contain;
+}
+.column{
+  padding: 40px;
+}
+h3{
+  font-size: 18px;
+  color: rgba(25, 2, 94, 0.644);
+}

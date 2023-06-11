@@ -19,10 +19,12 @@ import { DeliveryComponent } from './Delivery/Delivery.component';
 import { FooterComponent } from './Footer/Footer.component';
 import { HeaderComponent } from './Header/Header.component';
 import { AdminModule } from './Admin/Admin.module';
+import { NotFoundComponent } from './NotFound/NotFound.component';
+import { ProductDetailComponent } from './productDetail/productDetail.component';
 
 
 @NgModule({
-  declarations: [
+  declarations: [		
     AppComponent,
       HomeComponent,
       LoginComponent,
@@ -35,7 +37,8 @@ import { AdminModule } from './Admin/Admin.module';
 
       FooterComponent,
       HeaderComponent,
-
+      NotFoundComponent,
+      ProductDetailComponent
    ],
   imports: [
     BrowserModule,

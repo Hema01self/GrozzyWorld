@@ -10,7 +10,7 @@ export class CartService {
   private storageKey = 'cartItems';
   items: Product[] = [];
 
-  cartItemCount = new BehaviorSubject(0); //it return observable we can use whereever by using subscribe
+  cartItemCount = new BehaviorSubject(0); //it return observable we can use where ever by using subscribe
   constructor(private http: HttpClient) {  this.loadCartItems();}
   addToCart(product: Product) { //here the Product specifies the datatype of variables that mentioned in Product Interface
     let itemIndex = this.items.findIndex((item) => item.name === product.name);
@@ -70,6 +70,16 @@ export class CartService {
     if (storedItems) {
       this.items = JSON.parse(storedItems);
       this.updateCartItemCount();
+    }
+  }
+
+  //newly added
+  updateQuantity(product: any, quantity: number) {
+    // product.quantity = quantity;
+    // 07.6
+    const existingProduct = this.items.find(item => item.id === product.id);
+    if (existingProduct) {
+      existingProduct.quantity = quantity;
     }
   }
 }

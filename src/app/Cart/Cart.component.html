@@ -22,13 +22,15 @@
             <td>
               <p> {{item.price|currency:'INR'}}</p>
             </td>
-            <td> {{item.quantity}}</td>
+            <td>
+              <div class="quantity-input"><input type="number" [(ngModel)]="item.quantity" min="1" max="10" (change)="updateQuantity(item, item.quantity)" /></div>
+            </td>
             <td><button (click)="removeFromCart(item)" class="cart-remove-button">Remove</button></td>
 
           </tr>
           <tr>
             <td colspan="2"></td>
-            <td><button (click)="emptyCart();confirmClearCart()" class="cart-remove-button">Empty</button></td>
+            <td><button (click)="confirmClearCart()" class="cart-remove-button">Empty</button></td>
             <td><button routerLink="/product" class="cart-shop-button">Shop More</button></td>
             <td><button (click)="checkout()" class="cart-checkout-button" routerLink="/delivery">Checkout</button></td>
             <td>Grand Total: {{ getGrandTotal()|currency:'INR'}}</td>
@@ -36,8 +38,6 @@
         </tbody>
       </table>
     </div>
-
-
   </ng-container>
 
   <ng-container *ngIf="cartItems.length==0">

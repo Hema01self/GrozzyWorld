@@ -44,21 +44,18 @@ export class LoginComponent {
             }
           );
 
-          this.route.navigate(['\home']);
+           this.route.navigate(['/home']);
           alert('Logged In Successfully');
           console.log('username: '+this.emailid);
           console.log('pwd: '+this.password);
           console.log('login.ts matched')
+
         }
-        else{
-          // this.errorMessage='invalid uname or pword';
-          // console.log('invalid');
-          // alert('invalid');
-        }
+
       },
       (error)=>{
         console.log(error);
-        this.errorMessage='An error occurred while logging';
+       
         alert('User Credentials are mismatch')
       }
     );
@@ -70,6 +67,7 @@ export class LoginComponent {
           console.log('admin uname' +this.emailid );
           console.log('admin uname' +this.password);
           alert('Admin loggedin successfully');
+          localStorage.setItem('currentAdmin', JSON.stringify(result));
         }
       },
       (error)=>{

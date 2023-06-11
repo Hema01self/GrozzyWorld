@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './About/About.component';
 import { AdminHomeComponent } from './Admin/AdminHome/AdminHome.component';
@@ -9,7 +9,6 @@ import { EditProductComponent } from './Admin/EditProduct/EditProduct.component'
 import { OrdersComponent } from './Admin/Orders/Orders.component';
 import { ProductsComponent } from './Admin/Products/Products.component';
 import { QuriesComponent } from './Admin/Quries/Quries.component';
-import { SettingsComponent } from './Admin/Settings/Settings.component';
 import { UpdateProductComponent } from './Admin/updateProduct/updateProduct.component';
 import { CartComponent } from './Cart/Cart.component';
 import { ContactComponent } from './Contact/Contact.component';
@@ -18,6 +17,10 @@ import { HomeComponent } from './Home/Home.component';
 import { LoginComponent } from './Login/Login.component';
 import { ProductListComponent } from './ProductList/ProductList.component';
 import { RegisterComponent } from './Register/Register.component';
+import { AuthGuard } from './auth.guard';
+import { AdminAuthGuard } from './admin-auth.guard';
+import { NotFoundComponent } from './NotFound/NotFound.component';
+import { ProductDetailComponent } from './productDetail/productDetail.component';
 
 const routes: Routes = [
   {
@@ -33,12 +36,18 @@ const routes: Routes = [
     component:ProductListComponent
   },
   {
+path:'productdetail/:id',
+component:ProductDetailComponent
+  },
+  {
     path:'cart',
-    component:CartComponent
+    component:CartComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'delivery',
-    component:DeliveryComponent
+    component:DeliveryComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'contact',
@@ -54,48 +63,57 @@ const routes: Routes = [
   },
   {
     path:'admin/dashboard',
-    component:DashboardComponent
+    component:DashboardComponent,
+    canActivate:[AdminAuthGuard]
   },
   {
     path:'admin/home',
-    component:AdminHomeComponent
+    component:AdminHomeComponent,
+    canActivate:[AdminAuthGuard]
   },
   {
     path:'admin/products',
-    component:ProductsComponent
+    component:ProductsComponent,
+    canActivate:[AdminAuthGuard]
   },
   {
     path:'admin/EditProduct/:id',
-    component:EditProductComponent
+    component:EditProductComponent,
+    canActivate:[AdminAuthGuard]
   },
   {
     path:'admin/updateProduct',
     component:UpdateProductComponent,
+    canActivate:[AdminAuthGuard]
   },
   {
     path:'admin/categories',
-    component:CategoriesComponent
+    component:CategoriesComponent,
+    canActivate:[AdminAuthGuard]
   },
   {
     path:'admin/customers',
-    component:CustomersComponent
+    component:CustomersComponent,
+    canActivate:[AdminAuthGuard]
   },
   {
     path:'admin/orders',
-    component:OrdersComponent
+    component:OrdersComponent,
+    canActivate:[AdminAuthGuard]
   },
   {
     path:'admin/queries',
-    component:QuriesComponent
-  },
-  {
-    path:'admin/settings',
-    component:SettingsComponent
+    component:QuriesComponent,
+    canActivate:[AdminAuthGuard]
   },
 
   {
     path:'',
     component:HomeComponent
+  },
+  {
+  path:'**',
+  component:NotFoundComponent
   }
 ];
 

@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
   constructor(private userService:UserService,private cartService:CartService,public authService:AuthService,public route:Router){
     this.userService.getCurrentUser().subscribe(user=>this.users=user);
   }
-  // loginStatus=this.userService.userLogin;
+
 
   ngOnInit(): void{
     this.cartService.getCartCount().subscribe((total)=>{
@@ -52,7 +52,7 @@ logout(){
   const result = confirm("Are you sure you want to logout?");
   if (result) {
     this.userService.removeCurrentUser(this.user[0].id).subscribe(() => {
-      alert("Successfully logged out");
+      // alert("Successfully logged out");
       this.usercount = 0;
       localStorage.removeItem('currentUser');
       this.cartService.clearCart();

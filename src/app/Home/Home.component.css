@@ -8,7 +8,6 @@
   display: flex;
   justify-items: flex-end;
   justify-content: space-between;
-
 }
 
 .home-left-content{
@@ -59,7 +58,6 @@
   text-align: center;
   margin: 10px;
   --borderWidth: 5px;
-
   border-radius: var(--borderWidth);
   padding: 10px;
 }

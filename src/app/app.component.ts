@@ -12,15 +12,11 @@ import { CartService } from './cart.service';
 })
 export class AppComponent implements OnInit{
   title = 'Grozzy_Pro';
-  isLoggedIn!: boolean;
-  public totalItem:number=0;
-  constructor(private userService:UserService,private cartService:CartService,private authService:AuthService){}
-  // loginStatus=this.userService.userLogin;
+
+  constructor(){}
 
   ngOnInit(): void{
-    this.cartService.getCartCount().subscribe((total)=>{
-      this.totalItem=total;
-    });
+
 
 
 

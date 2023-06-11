@@ -14,7 +14,6 @@ export class OrdersComponent implements OnInit {
   items: Product[]=[];
   orders:any[]=[];
   constructor(private cartService: CartService,private productApiService:ProductApiService) {
-// this.productApiService.getOrder().subscribe((orders)=>{this.orders=orders[0]})
   }
 
   ngOnInit() {

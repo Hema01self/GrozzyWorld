@@ -10,19 +10,15 @@ padding-bottom: 10px;
 .grid-three-columns{
   grid-template-columns:repeat(4,1fr);
   padding-left: 100px;
-
 }
 .main-box{
   padding-bottom: 40px;
-
 }
 .product-name{
   text-align: center;
 }
 .quantity-input {
   display: inline-block;
-
-
 }
 .quantity-input input[type="number"] {
   width: 50px;
@@ -53,7 +49,6 @@ display: flex;
   background-color: #2D9CDB;
 }
 .product-image{
-
   transition: 0.3s ease-in-out;
 }
 .product-image:hover{
@@ -62,12 +57,11 @@ display: flex;
 }
 .cart-icon-container{
   float: right;
-  padding: 20px 20px 0 0;
+  padding: 0px 50px 0 0;
 }
 .cart-icon {
-  position: relative;
+  position: fixed;
   display: inline-block;
-
 }
 .cart-icon i {
   font-size: 2rem;
@@ -117,18 +111,18 @@ display: flex;
     #ff1361 67%,
     #fff800 100%
   );
-  background-size: auto auto;
-  background-clip: border-box;
-  background-size: 200% auto;
+  background-size: auto auto; /*bg image displayed original size */
+  background-clip: border-box;/*bg image clipped to elmt size shouldn't extend the size*/
+  background-size: 200% auto;/*for moving effect size is changed bg size changed twice*/
   color: grey;
   background-clip: text;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text;/*make the text transparent to fill gradient*/
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
 
       font-size: 30px;
       border: none;
-cursor: pointer;
+      cursor: pointer;
 }
 @keyframes textclip {
   to {
