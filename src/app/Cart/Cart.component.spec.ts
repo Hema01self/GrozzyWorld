@@ -4,6 +4,10 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { CartComponent } from './Cart.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from '../Header/Header.component';
+import { FooterComponent } from '../Footer/Footer.component';
+import { FormsModule } from '@angular/forms';
 
 describe('CartComponent', () => {
   let component: CartComponent;
@@ -11,7 +15,8 @@ describe('CartComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CartComponent ]
+      declarations: [ CartComponent,HeaderComponent,FooterComponent ],
+      imports:[HttpClientModule,FormsModule]
     })
     .compileComponents();
   }));

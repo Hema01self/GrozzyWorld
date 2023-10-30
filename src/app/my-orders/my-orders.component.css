@@ -1,0 +1,75 @@
+.body{
+  margin:0px 50px 0px 50px;
+  background-color: rgb(255, 255, 255, 0.8);
+  font-family: 'Poppins', sans-serif;
+  padding: 5px;
+}
+.cart-image{
+  text-align: center;
+}
+.cart-content2{
+  text-align: center;
+  color: #dd5e89;
+  font-weight: bold;
+}
+.cart-order{
+  text-align: center;
+  padding-bottom: 30px;
+}
+.cart-order-button{
+  background: linear-gradient(-135deg, #f82189, #e5aabe);
+  padding: 5px 30px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+
+}
+.cart-order-button:hover{
+  background: linear-gradient(135deg, rgba(104, 70, 207, 0.644), #dd5e89);
+
+}
+table
+{
+  border-collapse: collapse;
+  width: 100%;
+}
+table, td, th {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  color:rgb(25, 2, 94);
+}
+td{
+  text-align: center;
+  font-weight:bold ;
+  color:rgb(25, 2, 94);
+}
+.cart-table{
+  margin:30px;
+}
+.cart-remove-button{
+  background: #b92b27;;
+  color:white;
+  border-radius: 5px;
+  padding:10px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+.cart-shop-button{
+  background: #0085ba;
+  color:white;
+  border-radius: 5px;
+  padding:10px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

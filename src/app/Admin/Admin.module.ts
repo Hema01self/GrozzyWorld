@@ -13,7 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UpdateProductComponent } from './updateProduct/updateProduct.component';
 import { EditProductComponent } from './EditProduct/EditProduct.component';
-
+import { ReviewComponent } from './Review/Review.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -33,6 +33,7 @@ import { EditProductComponent } from './EditProduct/EditProduct.component';
     QuriesComponent,
     UpdateProductComponent,
     EditProductComponent,
+    ReviewComponent
   ],
 })
 export class AdminModule {}

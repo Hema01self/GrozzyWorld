@@ -23,6 +23,7 @@ editProductData:any="";
     if (result){
       this.productApiService.deleteProduct(id).subscribe((data)=>{
         alert("Removed successfully");
+        console.log('Product removed from db')
       });
       this.productApiService.getProducts().subscribe(product=>this.products=product);
     }

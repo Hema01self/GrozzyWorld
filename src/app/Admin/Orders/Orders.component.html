@@ -11,14 +11,12 @@
   </div>
 
   <div *ngFor="let orderItem of orders" class="order-detail">
-    <h3>Order ID: {{ orderItem.id }}</h3>
+    <h3><span style="color:rgb(25, 2, 94)">User Id:</span> {{ orderItem.emailId }}</h3>
+    <h3><span style="color:rgb(25, 2, 94)">Bill amount:</span> {{ orderItem.total |currency:"INR"}}</h3>
+    <h3>{{orderItem.date}}</h3>
 
-    <div *ngFor="let user of orderItem.user">
-      <h3>User Details: </h3>
-      <p style="color: #dd5e89;">Email : {{ user.email }}</p>
-    </div>
-    <h3>Item Details:</h3>
-    <div *ngFor="let item of orderItem.items" class="grid grid-three-columns">
+    <h3><span style="color:rgb(25, 2, 94)">Item Details:</span></h3>
+    <div *ngFor="let item of orderItem.Menu_details" class="grid grid-columns">
 
       <p>Product ID : {{ item.id }}</p>
       <p>Name : {{ item.name }}</p>
@@ -26,10 +24,19 @@
       <p>Quantity : {{ item.quantity }}</p>
       <p>Category : {{ item.category }}</p>
     </div>
+    <button (click)="cancelOrder(orderItem.id)" class="cart-remove-button">cancel</button>
+    <button (click)="approveOrder(orderItem.id)" class="cart-checkout-button">Approve</button>
+
+<span style="font-weight: bold;">Status: {{orderItem.adminstatus}}</span>
+<p *ngIf="orderItem.userstatus === 'Cancelled'" style="font-weight: bold;"><span style="color:rgb(25, 2, 94); " >Message : </span>Order cancellation requested by user. Please stop the process.</p>
+
+
   </div>
+  <div style="text-align: center;"><img src="assets/images/cardboard.png"></div>
+
 <div *ngIf="orders.length===0">
   <div class="cart-image"><img src="assets/images/empty-cart.png"></div>
 <div class="order"><h3>No orders available</h3></div>
-<img src="assets/images/home_fruit.png" width="1147px">
+
 </div>
 </div>

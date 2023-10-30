@@ -21,7 +21,10 @@ import { AuthGuard } from './auth.guard';
 import { AdminAuthGuard } from './admin-auth.guard';
 import { NotFoundComponent } from './NotFound/NotFound.component';
 import { ProductDetailComponent } from './productDetail/productDetail.component';
-
+import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { OrderDetailComponent } from './Order-detail/Order-detail.component';
+import { ForgotPasswordComponent } from './forgotPassword/forgotPassword.component';
+import { ReviewComponent } from './Admin/Review/Review.component';
 const routes: Routes = [
   {
     path:'home',
@@ -48,7 +51,18 @@ component:ProductDetailComponent
     path:'delivery',
     component:DeliveryComponent,
     canActivate:[AuthGuard]
+
   },
+{
+  path:'my-order',
+  component:MyOrdersComponent,
+  canActivate:[AuthGuard]
+},
+{
+  path:'my-order/:check',
+  component:OrderDetailComponent,
+  canActivate:[AuthGuard]
+},
   {
     path:'contact',
     component:ContactComponent
@@ -56,6 +70,10 @@ component:ProductDetailComponent
   {
     path:'login',
     component:LoginComponent,
+  },
+  {
+    path:'forgot-password',
+    component:ForgotPasswordComponent
   },
   {
     path:'register',
@@ -100,6 +118,12 @@ component:ProductDetailComponent
     path:'admin/orders',
     component:OrdersComponent,
     canActivate:[AdminAuthGuard]
+  },
+  {
+    path:'admin/reviews',
+    component:ReviewComponent,
+    canActivate:[AdminAuthGuard]
+
   },
   {
     path:'admin/queries',

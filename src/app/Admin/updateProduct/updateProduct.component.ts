@@ -51,7 +51,7 @@ export class UpdateProductComponent implements OnInit {
     };
     this.productApiService.addProducts(body).subscribe((data) => {
       alert('Product was added');
-      console.log(body);
+      console.log(body+'product added');
 
       this.route.navigate(['/admin/products']);
     });

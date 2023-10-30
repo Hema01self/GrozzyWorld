@@ -4,6 +4,8 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { QuriesComponent } from './Quries.component';
+import { AdminHomeComponent } from '../AdminHome/AdminHome.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('QuriesComponent', () => {
   let component: QuriesComponent;
@@ -11,7 +13,8 @@ describe('QuriesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QuriesComponent ]
+      declarations: [ QuriesComponent,AdminHomeComponent ],
+      imports:[HttpClientModule]
     })
     .compileComponents();
   }));

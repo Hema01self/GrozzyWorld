@@ -1,0 +1,32 @@
+<app-AdminHome></app-AdminHome>
+<div id="main">
+  <div class="top-nav">
+    <div class="top-page">
+      <span style="font-size:25px;cursor:pointer; color:grey;" class="nav">☰ Reviews</span>
+    </div>
+    <div class="profile">
+      <img src="assets/images/user.png" class="pro-img" />
+      <p>Hemaltha<span>Admin</span></p>
+    </div>
+  </div>
+  <div *ngFor="let orderItem of orders" class="order-detail">
+    <h3>User Id: <span style="color:rgb(25, 2, 94)">{{ orderItem.emailId }}</span></h3>
+    <h3>Product Detail:</h3>
+    <p *ngFor="let item of orderItem.Menu_details" >{{ item.name }}<span> {{ item.quantity }} {{item.weight}}</span></p>
+    <form #reviewForm="ngForm" (submit)="ReviewForm(orderItem.id)">
+    <div class="flex">
+      <div class="review-message">
+        <h3>Customer review : <span style="color:rgb(25, 2, 94)">{{orderItem.review}}</span></h3>
+        <h3>Your feedback : <span style="color:rgb(25, 2, 94)">{{orderItem.feedback}}</span></h3>
+      </div>
+    <div class="review-container">
+    <h3>Add a feedback</h3>
+    <textarea style="width: 50%;" rows="5" cols="60" placeholder="Your Message..."  name="message" #msg=ngModel [(ngModel)]="message"></textarea>
+    <button class="cart-shop-button">Submit</button>
+    </div>
+
+
+    </div>
+  </form>
+  </div>
+  </div>

@@ -1,17 +1,18 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { User } from '../User';
 import { HttpClient } from '@angular/common/http';
 import { UserService } from '../user.service';
 import { switchMap } from 'rxjs';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-Login',
   templateUrl: './Login.component.html',
   styleUrls: ['./Login.component.css'],
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
   emailid: any = '';
   password: any = '';
   errorMessage!: string;
@@ -20,8 +21,13 @@ export class LoginComponent {
     private authService: AuthService,
     private http: HttpClient,
     private route: Router,
-    private userService:UserService
+    private userService:UserService,
+    private cartService:CartService,
+    private activatedRoute: ActivatedRoute
   ) {}
+  ngOnInit() {
+
+  }
 
 
 
@@ -35,6 +41,14 @@ export class LoginComponent {
             pword: this.password,
             userType: 'user'
           };
+          const retUrl = this.activatedRoute.snapshot.queryParams['retUrl'];
+          if(retUrl){
+            this.route.navigateByUrl(retUrl);
+          }
+          else{
+            alert('Logged In Successfully');
+            this.route.navigate(['/home']);
+          }
           this.userService.currentUser(user).subscribe(
             (savedUser: any)=>{
               console.log('user saved ',savedUser);
@@ -44,8 +58,19 @@ export class LoginComponent {
             }
           );
 
-           this.route.navigate(['/home']);
-          alert('Logged In Successfully');
+          setTimeout(function(){
+            window.location.reload();
+
+          },100);
+
+
+
+          const pendingCartItem = localStorage.getItem('pendingCart');
+          if (pendingCartItem) {
+            const productToAdd = JSON.parse(pendingCartItem);
+            this.cartService.addToCart(productToAdd);
+            localStorage.removeItem('pendingCart');
+          }
           console.log('username: '+this.emailid);
           console.log('pwd: '+this.password);
           console.log('login.ts matched')
@@ -55,8 +80,8 @@ export class LoginComponent {
       },
       (error)=>{
         console.log(error);
-       
-        alert('User Credentials are mismatch')
+
+         alert('User Credentials are mismatch')
       }
     );
 

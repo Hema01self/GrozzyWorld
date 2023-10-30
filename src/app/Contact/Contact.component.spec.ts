@@ -4,6 +4,10 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { ContactComponent } from './Contact.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from '../Header/Header.component';
+import { FooterComponent } from '../Footer/Footer.component';
+import { FormsModule } from '@angular/forms';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;
@@ -11,7 +15,8 @@ describe('ContactComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContactComponent ]
+      declarations: [ ContactComponent,HeaderComponent,FooterComponent ],
+      imports:[HttpClientModule,FormsModule]
     })
     .compileComponents();
   }));

@@ -21,10 +21,13 @@ import { HeaderComponent } from './Header/Header.component';
 import { AdminModule } from './Admin/Admin.module';
 import { NotFoundComponent } from './NotFound/NotFound.component';
 import { ProductDetailComponent } from './productDetail/productDetail.component';
-
+import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { OrderDetailComponent } from './Order-detail/Order-detail.component';
+import { ForgotPasswordComponent } from './forgotPassword/forgotPassword.component';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
 @NgModule({
-  declarations: [		
+  declarations: [
     AppComponent,
       HomeComponent,
       LoginComponent,
@@ -38,12 +41,20 @@ import { ProductDetailComponent } from './productDetail/productDetail.component'
       FooterComponent,
       HeaderComponent,
       NotFoundComponent,
-      ProductDetailComponent
+      ProductDetailComponent,
+      MyOrdersComponent,
+      OrderDetailComponent,
+      ForgotPasswordComponent
+
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,ReactiveFormsModule,HttpClientModule,AdminModule
+    FormsModule,ReactiveFormsModule,HttpClientModule,AdminModule,LoggerModule.forRoot({
+      serverLoggingUrl:'',
+      level:NgxLoggerLevel.DEBUG,
+      serverLogLevel:NgxLoggerLevel.ERROR
+    })
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

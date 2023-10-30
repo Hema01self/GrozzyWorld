@@ -31,7 +31,5 @@ export class DashboardComponent implements OnInit {
       this.products=products;
     })
   }
-  product(){
-    this.route.navigate(['/admin/products']);
-  }
+
 }

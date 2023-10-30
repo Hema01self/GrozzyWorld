@@ -9,12 +9,13 @@
             <th>Product Name</th>
             <th>Product Image</th>
             <th>Price</th>
+            <th>Offer Price</th>
             <th>Quantity</th>
             <th>Action</th>
           </tr>
         </thead>
         <tbody>
-          <tr  *ngFor="let item of cartItems; let x=index">
+          <tr *ngFor="let item of cartItems; let x=index">
 
             <td>{{x+1}}</td>
             <td>{{item.name}}</td>
@@ -22,8 +23,16 @@
             <td>
               <p> {{item.price|currency:'INR'}}</p>
             </td>
+            <td *ngIf="item.offerPrice">
+              <p> {{item.offerPrice|currency:'INR'}}</p>
+            </td>
+            <td *ngIf="!item.offerPrice">
+              <p>No offer {{item.offerPrice|currency:'INR'}}</p>
+            </td>
+
             <td>
-              <div class="quantity-input"><input type="number" [(ngModel)]="item.quantity" min="1" max="10" (change)="updateQuantity(item, item.quantity)" /></div>
+              <div class="quantity-input"><input type="number" [(ngModel)]="item.quantity" min="1" max="10"
+                  (change)="updateQuantity(item, item.quantity)" /></div>
             </td>
             <td><button (click)="removeFromCart(item)" class="cart-remove-button">Remove</button></td>
 
@@ -32,12 +41,15 @@
             <td colspan="2"></td>
             <td><button (click)="confirmClearCart()" class="cart-remove-button">Empty</button></td>
             <td><button routerLink="/product" class="cart-shop-button">Shop More</button></td>
-            <td><button (click)="checkout()" class="cart-checkout-button" routerLink="/delivery">Checkout</button></td>
-            <td>Grand Total: {{ getGrandTotal()|currency:'INR'}}</td>
+            <td><button (click)="newCheck()" class="cart-checkout-button" routerLink="/delivery">Checkout</button></td>
+            <td>Grand Total: <span><s>{{ getGrandTotal() |currency:'INR'}}</s> </span> <span
+                style="color: green; font-weight: 1200;"> {{ getOfferGrandTotal()|currency:'INR'}}</span> </td>
           </tr>
         </tbody>
       </table>
+
     </div>
+
   </ng-container>
 
   <ng-container *ngIf="cartItems.length==0">
@@ -45,6 +57,9 @@
     <h2 class="cart-content1">Your Cart is Empty</h2>
     <h3 class="cart-content2">Looks like you haven't added anything in you cart yet</h3>
     <div class="cart-order"><button class="cart-order-button" routerLink="/product">Order Now</button></div>
+    <br>
+
+
   </ng-container>
 
 </div>

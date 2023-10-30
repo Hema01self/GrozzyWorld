@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
 .style-heading
 {
   text-transform: uppercase;
@@ -10,13 +9,13 @@
     #ff1361 67%,
     #fff800 100%
   );
-  background-size: auto auto;
-  background-clip: border-box;
+  background-size: auto auto; /*original size*/
+  background-clip: border-box; /*background image extends to the outer edge of the border*/
   background-size: 200% auto;
   color: #fff;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text; /*background image will only be visible where the text is*/
+  -webkit-background-clip: text; /*background image clipping for the text*/
+  -webkit-text-fill-color: transparent; /*sets the color of the text to transparent*/
   animation: textclip 2s linear infinite;
 
       font-size: 40px;

@@ -4,6 +4,8 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { CategoriesComponent } from './Categories.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AdminHomeComponent } from '../AdminHome/AdminHome.component';
 
 describe('CategoriesComponent', () => {
   let component: CategoriesComponent;
@@ -11,7 +13,8 @@ describe('CategoriesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CategoriesComponent ]
+      declarations: [ CategoriesComponent,AdminHomeComponent ],
+      imports:[HttpClientModule]
     })
     .compileComponents();
   }));

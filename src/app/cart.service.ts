@@ -2,29 +2,31 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Product } from './Product';
 import { HttpClient } from '@angular/common/http';
-
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
   private storageKey = 'cartItems';
+  public orderDetail = environment.gerOrderDetail;
   items: Product[] = [];
 
   cartItemCount = new BehaviorSubject(0); //it return observable we can use where ever by using subscribe
-  constructor(private http: HttpClient) {  this.loadCartItems();}
-  addToCart(product: Product) { //here the Product specifies the datatype of variables that mentioned in Product Interface
+  constructor(private http: HttpClient) {
+    this.loadCartItems();
+  }
+  addToCart(product: Product) {
+    //here the Product specifies the datatype of variables that mentioned in Product Interface
     let itemIndex = this.items.findIndex((item) => item.name === product.name);
     if (itemIndex !== -1) {
       this.items[itemIndex].quantity += product.quantity;
-    }else{
+    } else {
       this.items.push(product); // push->push the item to cart
     }
     this.cartItemCount.next(this.cartItemCount.value + 1); // next->data is passed where ever subscribed
     this.updateCartItemCount();
     this.saveCartItems();
-
   }
-
 
   getCartCount() {
     return this.cartItemCount.asObservable();
@@ -77,9 +79,27 @@ export class CartService {
   updateQuantity(product: any, quantity: number) {
     // product.quantity = quantity;
     // 07.6
-    const existingProduct = this.items.find(item => item.id === product.id);
+    const existingProduct = this.items.find((item) => item.id === product.id);
     if (existingProduct) {
       existingProduct.quantity = quantity;
     }
   }
+
+  //28
+  OrderList() {
+    let user = localStorage.getItem('currentUser');
+    let userData = user && JSON.parse(user);
+    return this.http.get<any>(
+      `http://localhost:3000/order?emailId=` + userData.email
+    );
+  }
+  cancelOrder(id: any) {
+    return this.http.delete(this.orderDetail + '/' + id);
+  }
+  // order detail
+  getDetailedOrder(id: String) {
+    return this.http.get(this.orderDetail + '/' + id);
+  }
+
+  // cart details 29.06
 }

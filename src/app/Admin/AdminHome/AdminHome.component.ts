@@ -16,7 +16,7 @@ export class AdminHomeComponent implements OnInit {
     const result = confirm("Are you sure you want to logout?");
     if (result) {
       localStorage.removeItem('currentAdmin');
-      this.route.navigate(['/home']);
+      this.route.navigate(['\login']);
     }
   }
 }

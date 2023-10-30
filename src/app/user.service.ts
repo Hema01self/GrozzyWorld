@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { User } from './User';
-
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,14 +11,14 @@ export class UserService {
 constructor(private client:HttpClient) { }
 
 userCount = new BehaviorSubject(0);
-private contactUrl="http://localhost:3000/contact-info";
-private userUrl="http://localhost:3000/users";
-private adminUrl="http://localhost:3000/admin";
+private contactUrl=environment.getContactInfo;
+private userUrl=environment.getUserDetail;
+private adminUrl=environment.getAdminDetail;
 addUserInfo(body:any){
-  return this.client.post("http://localhost:3000/users",body);
+  return this.client.post(this.userUrl,body);
   }
 addContactInfo(body:any){
-  return this.client.post("http://localhost:3000/contact-info",body);
+  return this.client.post(this.contactUrl,body);
  }
 getContactInfo():Observable<any[]>{
   return this.client.get<any[]>(this.contactUrl);
@@ -30,7 +30,7 @@ getAdminInfo():Observable<any[]>{
   return this.client.get<any[]>(this.adminUrl);
 }
 currentUser(user: User): Observable<User>{
-const dbUrl='http://localhost:3000/current-user';
+const dbUrl=environment.getCurrentUser;
 this.userCount.next(this.userCount.value + 1);
 return this.client.post<User>(dbUrl,user).pipe(
   tap((loggedInUser: User) => {
@@ -40,7 +40,7 @@ return this.client.post<User>(dbUrl,user).pipe(
 );
 }
  currentAdmin(admin:User): Observable<User>{
-  const adminUrl="http://localhost:3000/admin";
+  const adminUrl=this.adminUrl;
    return this.client.post<User>(adminUrl,admin).pipe(
     tap((loggedInUser: User) => {
       localStorage.setItem('currentAdmin', JSON.stringify(loggedInUser));
@@ -48,13 +48,13 @@ return this.client.post<User>(dbUrl,user).pipe(
    )
  }
 getUserCount(){
-  return this.userCount.asObservable();;
+  return this.userCount.asObservable();
 }
 removeCurrentUser(id: any){
   this.userCount.next(this.userCount.value - 1);
-  return this.client.delete('http://localhost:3000/current-user' + '/' + id)
+  return this.client.delete(this.currentUser + '/' + id)
 }
 getCurrentUser():Observable<any[]>{
-  return this.client.get<any[]>('http://localhost:3000/current-user');
+  return this.client.get<any[]>(environment.getCurrentUser);
 }
 }

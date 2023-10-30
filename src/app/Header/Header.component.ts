@@ -10,32 +10,55 @@ import { Router } from '@angular/router';
   styleUrls: ['./Header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  menuType: string = 'default';
   public totalItem:number=0;
   public usercount:number=0;
   users:any=[];
   user:any=[];
   constructor(private userService:UserService,private cartService:CartService,public authService:AuthService,public route:Router){
-    this.userService.getCurrentUser().subscribe(user=>this.users=user);
+    // this.userService.getCurrentUser().subscribe(user=>this.users=user);
   }
 
 
   ngOnInit(): void{
-    this.cartService.getCartCount().subscribe((total)=>{
-      this.totalItem=total;
-    });
+    // this.cartService.getCartCount().subscribe((total)=>{
+      // this.totalItem=total;
+    // });
 
     this.userService.getUserCount().subscribe((usertotal)=>{
       this.usercount=usertotal;
     });
-    this.userService.getUserInfo().subscribe((user)=>{
-      this.user=user;
-    });
+    // this.userService.getUserInfo().subscribe((user)=>{
+      // this.user=user;
+    // });
       // Check if a user is stored in local storage
-  const storedUser = localStorage.getItem('currentUser');
-  if (storedUser) {
-    this.user = JSON.parse(storedUser);
-    this.usercount = 1;
+      // const storedUser = localStorage.getItem('currentUser');
+      // if (storedUser) {
+        // this.user = JSON.parse(storedUser);
+        // this.usercount = 1;
+
+      // }
+      // else{
+        // this.usercount=0;
+      // }
+
+  if(localStorage.getItem('currentUser')){
+    let userStore = localStorage.getItem('currentUser');
+    let userData = userStore && JSON.parse(userStore);
+    this.menuType = 'user';
+
+  }
+  else {
+    this.menuType = 'default';
+  }
+  }
+
+  userLogout(){
+    const result = confirm("Are you sure you want to logout?");
+  if (result) {
+    localStorage.removeItem('currentUser');
+    this.cartService.clearCart();
+    this.route.navigate(['\login']);
   }
   }
 
@@ -66,4 +89,3 @@ isLoggedIn(): boolean {
   return (localStorage.getItem('currentUser') !== null || this.user.length > 0);
 }
 }
-

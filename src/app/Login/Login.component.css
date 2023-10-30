@@ -61,7 +61,10 @@
 
 .forgot {
   text-align: center;
+}
+.forgot a{
   color: white;
+  text-decoration: none;
 }
 .signup {
   text-align: center;

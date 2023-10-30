@@ -16,10 +16,9 @@ export class AuthGuard implements CanActivate {
         return true;
       }
       else{
-      alert('Please Login to see the page');
+      alert('Please login to see the page');
        this.route.navigate(['/login'],{queryParams:{retUrl:route.url}});
 
-      
         return false;
 
       }

@@ -4,6 +4,8 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { DashboardComponent } from './Dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AdminHomeComponent } from '../AdminHome/AdminHome.component';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -11,7 +13,8 @@ describe('DashboardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
+      declarations: [ DashboardComponent ,AdminHomeComponent],
+      imports:[HttpClientModule]
     })
     .compileComponents();
   }));

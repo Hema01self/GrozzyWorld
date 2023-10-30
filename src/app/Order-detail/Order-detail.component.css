@@ -1,0 +1,72 @@
+.body{
+  margin:0px 50px 0px 50px;
+  background-color: rgb(255, 255, 255, 0.8);
+  font-family: 'Poppins', sans-serif;
+  padding: 5px;
+}
+table
+{
+  border-collapse: collapse;
+  width: 100%;
+}
+table, td, th {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  color:rgb(25, 2, 94);
+}
+td{
+  text-align: center;
+  font-weight:bold ;
+  color:rgb(25, 2, 94);
+}
+.cart-table{
+  margin:30px;
+}
+h3
+{
+  padding-left: 10px;
+}
+.button{
+  padding: 10px 0 0 10px;
+}
+button{
+  padding: 10px;
+  background: #0085ba;
+  color:white;
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+}
+.cart-shop-button{
+  margin-left:5px ;
+  background: #0085ba;
+  color:white;
+  border-radius: 5px;
+  padding:10px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+textarea{
+  font-size: 20px;
+  padding: 15px;
+
+}
+
+.flex{
+  display: flex;
+}
+.review-message{
+  width: 70%;
+  margin-top: 10px;
+  font-size: 15px;
+  background-color: #e0e0e0;
+}
+.review-container{
+  margin-left: 50px;
+}
+h4{
+  padding-left: 10px;
+}

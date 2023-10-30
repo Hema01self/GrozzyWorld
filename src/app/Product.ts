@@ -1,6 +1,6 @@
 export interface Product {
   quantityEnabled: boolean;
-  id:undefined;
+  id:number;
   disabled: boolean;
   name: string;
   price: number;
@@ -10,4 +10,6 @@ export interface Product {
   detail?: string;
   weight?: string;
   rating?: number;
+  offerPrice?: number;
+  email:string;
 }

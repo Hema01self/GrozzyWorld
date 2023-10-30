@@ -4,16 +4,19 @@
     <ul>
       <li routerLinkActive="active-page"><a routerLink="/home">Home</a></li>
       <li routerLinkActive="active-page"><a routerLink="/about">About</a></li>
-      <li routerLinkActive="active-page"><a routerLink="/product">Shop</a>
-        <ul>
-          <li routerLinkActive="active-page"><a routerLink="/product">Product</a></li>
-          <li routerLinkActive="active-page"><a routerLink="/cart">Cart</a></li>
+      <li><a routerLink="/product">Shop</a>
+        <ul [ngSwitch]="menuType">
+          <li  *ngSwitchCase="'user'"><a routerLink="/product">Product</a></li>
+          <li  *ngSwitchCase="'user'"><a routerLink="/cart">Cart</a></li>
+          <li  *ngSwitchCase="'user'"><a routerLink="/my-order">My Orders</a></li>
+
         </ul>
       </li>
-      <li routerLinkActive="active-page">
-        <a *ngIf="usercount===0" routerLink="/login">Login</a>
-        <a *ngIf="usercount===1" (click)="logout()">Logout</a>
+      <li routerLinkActive="active-page" [ngSwitch]="menuType">
+        <a *ngSwitchCase="'default'" routerLink="/login">Login</a>
+        <a *ngSwitchCase="'user'" (click)="userLogout()">Logout</a>
       </li>
+
     </ul>
   </nav>
 </Header>

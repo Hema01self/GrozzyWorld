@@ -23,7 +23,12 @@
         <div class="product-image"><img [src]="product.image" width="200px" height="200px"></div>
 
         <div class="grid grid-two-columns">
-          <div class="price"><p>{{ product.price|currency:'INR'}}</p></div>
+          <!-- <div class="price"><p>{{ product.price|currency:'INR'}}</p><p>Offer Price: {{product.offerPrice|currency:'INR'}}</p></div> -->
+          <div class="price">
+            <p *ngIf="product.offerPrice"> <s>{{ product.price | currency:'INR' }}</s><br>Offer Price: {{ product.offerPrice | currency:'INR' }}</p>
+            <p *ngIf="!product.offerPrice">Original Price: {{ product.price | currency:'INR' }}</p>
+          </div>
+
           <div class="product-quantity">
             <label style="padding-left: 10px;color: #333;">Quantity:</label>
             <ng-container *ngIf="cart.includes(product)">
@@ -36,8 +41,8 @@
         </div>
 
         <div class="add-to-cart grid grid-two-columns">
-          <div><button (click)="addToCart(product)" *ngIf="usercount===1 && (!cart.includes(product)||cart.includes(product))" class="add-to-cart-button">ADD TO CART</button>
-            <button (click)="alertUser()" *ngIf="usercount===0" class="add-to-cart-button">ADD TO CART</button>
+          <div><button (click)="addToCart(product)" *ngIf=" (!cart.includes(product)||cart.includes(product))" class="add-to-cart-button">ADD TO CART</button>
+            <!-- <button (click)="alertUser()" *ngIf="usercount===0" class="add-to-cart-button">ADD TO CART</button> -->
           </div>
 
           <div style="padding-left: 50px;"><img routerLink="/productdetail/{{product.id}}" src="assets/images/list.png"

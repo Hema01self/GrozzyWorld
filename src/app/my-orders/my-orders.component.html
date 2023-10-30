@@ -1,0 +1,53 @@
+<app-Header></app-Header>
+<div class="body">
+<div *ngIf="status">
+  <div class="cart-image"><img src="assets/images/empty-cart.png"></div>
+
+  <h3 class="cart-content2">Looks like you haven't ordered anything !... </h3>
+  <div class="cart-order"><button class="cart-order-button" routerLink="/product">Order Now</button></div>
+</div>
+<div class="cart-table" *ngIf="!status" >
+
+<table>
+  <thead>
+    <tr>
+    <th>User email</th>
+    <th>Bill amount</th>
+    <th>Action</th>
+    <th>Time Remaining</th>
+    <th>Status</th>
+    <th>Detail</th>
+    </tr>
+  </thead>
+
+  <tbody *ngFor="let order of orderDetails">
+    <tr >
+      <td>{{order.emailId}}</td>
+      <td>{{order.total|currency:"INR"}}</td>
+      <td><button  (click)="cancelOrder(order.id)" [disabled]="remainingTime <= 0" *ngIf="order.userstatus==='Pending'" class="cart-remove-button">cancel</button></td>
+      <td><div><p *ngIf="order.userstatus==='Pending'" >{{ getFormattedTime() }}</p>
+                <p *ngIf="order.userstatus==='Cancelled'">00:00</p></div></td>
+        <td><div >
+          <p style="color: chocolate;" *ngIf="order.userstatus==='Cancelled' && order.adminstatus==='Pending'">Order successfully canceled <br>and money will be refunded</p>
+          <p style="color: chocolate;" *ngIf="order.userstatus==='Pending' && order.adminstatus==='Cancelled'">Your Order cancelled <br>and money will be refunded</p>
+          <!-- <p *ngIf="order.userstatus==='Pending'"> Delivered soon</p> -->
+           <p *ngIf="order.userstatus==='Pending' && order.adminstatus==='Pending'"> Delivered soon</p>
+          <p style="color: chocolate;" *ngIf="order.userstatus==='Cancelled'&& order.adminstatus==='Cancelled'">Your order was cancelled and <br>your money will be refunded</p>
+          <p *ngIf="order.userstatus==='Pending' && order.adminstatus==='Approved'"> Delivered soon</p>
+          <p style="color: chocolate;" *ngIf="order.userstatus==='Cancelled' && order.adminstatus==='Approved'"> Order successfully cancelled <br>and money will be refunded</p>
+
+        </div></td>
+        <td><button routerLink="/my-order/{{order.id}}" class="cart-shop-button">Detail</button></td>
+
+
+</tr>
+</tbody>
+
+</table>
+
+<p>Disclaimer : Please note that you can only cancel your order within two minutes of placing it. Once this timeframe has passed, cancellation requests cannot be accommodated. We apologize for any inconvenience this may cause.</p>
+<div style="text-align: center;"><img src="assets/images/cardboard.png"></div>
+
+</div>
+</div>
+<app-Footer></app-Footer>

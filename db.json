@@ -8,7 +8,7 @@
   ],
   "users": [
     {
-      "uname": "hema",
+      "uname": "Hema",
       "email": "hemalathanarayanan01@gmail.com",
       "phoneno": "9360806740",
       "pword": "Hema@123",
@@ -72,7 +72,50 @@
       "id": 8
     }
   ],
-  "current-user": [],
+  "current-user": [
+    {
+      "email": "hemalathanarayanan01@gmail.com",
+      "pword": "Hema@123",
+      "userType": "user",
+      "id": 1
+    },
+    {
+      "email": "hemalathanarayanan01@gmail.com",
+      "pword": "Hema@123",
+      "userType": "user",
+      "id": 2
+    },
+    {
+      "email": "hemalathanarayanan01@gmail.com",
+      "pword": "Hema@123",
+      "userType": "user",
+      "id": 3
+    },
+    {
+      "email": "hemalathanarayanan01@gmail.com",
+      "pword": "Hema@123",
+      "userType": "user",
+      "id": 4
+    },
+    {
+      "email": "hemalathanarayanan01@gmail.com",
+      "pword": "Hema@123",
+      "userType": "user",
+      "id": 5
+    },
+    {
+      "email": "hemalathanarayanan01@gmail.com",
+      "pword": "Hema@123",
+      "userType": "user",
+      "id": 6
+    },
+    {
+      "email": "hemalathanarayanan01@gmail.com",
+      "pword": "Hema@123",
+      "userType": "user",
+      "id": 7
+    }
+  ],
   "contact-info": [
     {
       "uname": "Hema",
@@ -105,41 +148,49 @@
       "sub": "Review",
       "msg": "Product quality is good",
       "id": 4
+    },
+    {
+      "uname": "Hema@01",
+      "mobileno": "9234567890",
+      "emailid": "hema@gmail.com",
+      "sub": "dfdgj",
+      "msg": "h",
+      "id": 5
     }
   ],
   "products": [
     {
       "name": "Tomato",
-      "price": "15",
+      "price": 20,
       "quantity": "1",
       "disabled": "false",
       "image": "assets/images/tomatoes.jpg",
-      "detail": "",
-      "weight": "1kg",
+      "description": "",
+      "weight": " kg",
       "rating": "5",
       "category": "veg",
       "id": 1
     },
     {
       "name": "Cauliflower",
-      "price": "25",
+      "price": 30,
       "quantity": "1",
       "disabled": "false",
       "image": "assets/images/image1.webp",
-      "detail": "about the product",
-      "weight": "1kg",
+      "description": "about the product",
+      "weight": " kg",
       "rating": "5",
       "category": "veg",
       "id": 2
     },
     {
       "name": "Potato",
-      "price": "20",
+      "price": 22,
       "quantity": "1",
       "disabled": "false",
       "image": "assets/images/slide2.jpg",
-      "detail": "about the product",
-      "weight": "1kg",
+      "description": "",
+      "weight": " kg",
       "rating": "5",
       "category": "veg",
       "id": 3
@@ -151,7 +202,7 @@
       "disabled": "false",
       "image": "assets/images/image2.jpg",
       "detail": "about the product",
-      "weight": "1kg",
+      "weight": " kg",
       "rating": "5",
       "category": "veg",
       "id": 4
@@ -164,7 +215,7 @@
       "disabled": false,
       "image": "assets/images/image5.jpg",
       "detail": "about the product",
-      "weight": "1kg",
+      "weight": " kg",
       "rating": 5,
       "category": "veg"
     },
@@ -176,7 +227,7 @@
       "disabled": false,
       "image": "assets/images/slide3.jpg",
       "detail": "about the product",
-      "weight": "1kg",
+      "weight": "kg",
       "rating": 5,
       "category": "veg"
     },
@@ -188,7 +239,7 @@
       "disabled": false,
       "image": "assets/images/slide5.jpg",
       "detail": "about the product",
-      "weight": "1kg",
+      "weight": " kg",
       "rating": 5,
       "category": "veg"
     },
@@ -200,7 +251,7 @@
       "disabled": false,
       "image": "assets/images/Brinjal.jpg",
       "detail": "about the product",
-      "weight": "1kg",
+      "weight": " kg",
       "rating": 5,
       "category": "veg"
     },
@@ -212,7 +263,7 @@
       "disabled": false,
       "image": "assets/images/fresh-kiwi-fruit-isolated.jpg",
       "detail": "about the product",
-      "weight": "1kg",
+      "weight": "kg",
       "rating": 5,
       "category": "fruit"
     },
@@ -224,7 +275,7 @@
       "disabled": false,
       "image": "assets/images/strawberry-berry-levitating-white-background.jpg",
       "detail": "about the product",
-      "weight": "1kg",
+      "weight": " kg",
       "rating": 5,
       "category": "fruit"
     },
@@ -236,7 +287,7 @@
       "disabled": false,
       "image": "assets/images/papaya-fruit-isolated.jpg",
       "detail": "about the product",
-      "weight": "1kg",
+      "weight": "kg",
       "rating": 5,
       "category": "fruit"
     },
@@ -248,7 +299,7 @@
       "disabled": false,
       "image": "assets/images/exotic-delicious-pomegranate-white-background.jpg",
       "detail": "about the product",
-      "weight": "1kg",
+      "weight": "kg",
       "rating": 5,
       "category": "fruit"
     },
@@ -260,7 +311,7 @@
       "disabled": false,
       "image": "assets/images/fresh-orange-isolated-white-back.jpg",
       "detail": "about the product",
-      "weight": "1kg",
+      "weight": "kg",
       "rating": 5,
       "category": "fruit"
     },
@@ -272,7 +323,7 @@
       "disabled": false,
       "image": "assets/images/slide7.jpg",
       "detail": "about the product",
-      "weight": "1kg",
+      "weight": "kg",
       "rating": 5,
       "category": "fruit"
     },
@@ -284,7 +335,7 @@
       "disabled": false,
       "image": "assets/images/panner - Copy.jpg",
       "detail": "about the product",
-      "weight": "1kg",
+      "weight": "kg",
       "rating": 5,
       "category": "Dairy"
     },
@@ -296,7 +347,7 @@
       "disabled": false,
       "image": "assets/images/fresh-milk-mug-jug-wooden-table.jpg",
       "detail": "about the product",
-      "weight": "1kg",
+      "weight": "ltr",
       "rating": 5,
       "category": "Dairy"
     },
@@ -308,7 +359,7 @@
       "disabled": false,
       "image": "assets/images/cheddar-cheese-dark-wooden-surface.jpg",
       "detail": "about the product",
-      "weight": "1kg",
+      "weight": "g",
       "rating": 5,
       "category": "Dairy"
     },
@@ -325,25 +376,25 @@
       "category": "Dairy"
     },
     {
-      "id": 19,
       "name": "Rice",
-      "price": 70,
-      "quantity": 1,
-      "disabled": false,
+      "price": 65,
+      "quantity": "1",
+      "disabled": "false",
       "image": "assets/images/rice.jpg",
-      "detail": "about the product",
-      "weight": "1kg",
-      "rating": 5,
-      "category": "grains"
+      "description": "about the product",
+      "weight": " kg",
+      "rating": "5",
+      "category": "grains",
+      "id": 19
     },
     {
-      "name": "Atta",
-      "price": 470,
+      "name": "Atta (10kg)",
+      "price": 472,
       "quantity": "1",
       "disabled": "false",
       "image": "assets/images/wheat.jpg",
-      "description": "about the product",
-      "weight": "1kg",
+      "description": "",
+      "weight": "kg",
       "rating": "5",
       "category": "grains",
       "id": 20
@@ -356,7 +407,7 @@
       "disabled": false,
       "image": "assets/images/peanut.jpg",
       "detail": "about the product",
-      "weight": "1kg",
+      "weight": " kg",
       "rating": 5,
       "category": "grains"
     },
@@ -369,446 +420,84 @@
       "disabled": false,
       "detail": "about the product",
       "image": "assets/images/urad-dal.jpg",
-      "weight": "1kg",
+      "weight": " kg",
       "rating": 5
     }
   ],
+  "cart": [],
   "order": [
     {
-      "user": [
+      "emailId": "hemalathanarayanan01@gmail.com",
+      "total": 10,
+      "date": "Date: 07/15/2023 Time: 12:01",
+      "userstatus": "Cancelled",
+      "adminstatus": "Cancelled",
+      "Menu_details": [
         {
-          "email": "priya@gmail.com",
-          "pword": "Priya@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "name": "Raddish",
-          "price": "25",
-          "category": "veg",
-          "quantity": 2,
-          "description": "about the product",
-          "image": "assets/images/image2.jpg",
-          "id": 4,
-          "disabled": true
-        },
-        {
-          "id": 3,
           "name": "Potato",
-          "price": 20,
-          "quantity": 2,
-          "disabled": true,
-          "image": "assets/images/slide2.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "veg"
-        },
-        {
-          "name": "Carrot",
-          "price": "35",
-          "category": "veg",
-          "quantity": 2,
-          "description": "about the product is carrot",
-          "image": "assets/images/slide5.jpg",
-          "id": 7,
-          "disabled": true
-        }
-      ],
-      "id": 1
-    },
-    {
-      "user": [
-        {
-          "email": "sudharsan25252@gmail.com",
-          "pword": "Sudha@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "id": 3,
-          "name": "Potato",
-          "price": 20,
-          "quantity": 1,
-          "disabled": true,
-          "image": "assets/images/slide2.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "veg"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "user": [
-        {
-          "email": "hemalathanarayanan01@gmail.com",
-          "pword": "Hema@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "name": "Raddish",
-          "price": "25",
-          "category": "veg",
+          "price": "20",
           "quantity": "1",
-          "description": "about the product",
-          "image": "assets/images/image2.jpg",
-          "id": 4,
-          "disabled": true
-        },
-        {
-          "id": 3,
-          "name": "Potato",
-          "price": 20,
-          "quantity": 2,
-          "disabled": true,
+          "disabled": "false",
           "image": "assets/images/slide2.jpg",
           "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "veg"
+          "weight": "kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 3,
+          "offerPrice": 10
+        }
+      ],
+      "id": 2,
+      "review": "Less quantity",
+      "feedback": "Thank you for your valuable feedback. we'll try to solve that in next order"
+    },
+    {
+      "emailId": "hemalathanarayanan01@gmail.com",
+      "total": 37.5,
+      "date": "Date: 07/20/2023 Time: 16:56",
+      "userstatus": "Cancelled",
+      "adminstatus": "Approved",
+      "review": "Good quality",
+      "feedback": "OKay",
+      "Menu_details": [
+        {
+          "name": "Raddish",
+          "price": "25",
+          "quantity": 2,
+          "disabled": "false",
+          "image": "assets/images/image2.jpg",
+          "detail": "about the product",
+          "weight": "kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 4,
+          "offerPrice": 12.5
+        },
+        {
+          "name": "Cauliflower",
+          "price": "25",
+          "quantity": "1",
+          "disabled": true,
+          "image": "assets/images/image1.webp",
+          "detail": "about the product",
+          "weight": "kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 2,
+          "offerPrice": 12.5
         }
       ],
       "id": 3
     },
     {
-      "user": [
-        {
-          "email": "hemalathanarayanan01@gmail.com",
-          "pword": "Hema@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "id": 3,
-          "name": "Potato",
-          "price": 20,
-          "quantity": 2,
-          "disabled": true,
-          "image": "assets/images/slide2.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "veg"
-        },
-        {
-          "name": "Cauliflower",
-          "price": "25",
-          "category": "veg",
-          "quantity": 2,
-          "description": "about the products",
-          "image": "assets/images/image1.webp",
-          "id": 2,
-          "disabled": true
-        }
-      ],
-      "id": 4
-    },
-    {
-      "user": [
-        {
-          "email": "hemalathanarayanan01@gmail.com",
-          "pword": "Hema@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "id": 3,
-          "name": "Potato",
-          "price": 20,
-          "quantity": 1,
-          "disabled": true,
-          "image": "assets/images/slide2.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "veg"
-        },
-        {
-          "name": "Cauliflower",
-          "price": "25",
-          "category": "veg",
-          "quantity": "1",
-          "description": "about the products",
-          "image": "assets/images/image1.webp",
-          "id": 2,
-          "disabled": true
-        }
-      ],
-      "id": 5
-    },
-    {
-      "user": [
-        {
-          "email": "hemalathanarayanan01@gmail.com",
-          "pword": "Hema@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "id": 3,
-          "name": "Potato",
-          "price": 20,
-          "quantity": 1,
-          "disabled": true,
-          "image": "assets/images/slide2.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "veg"
-        }
-      ],
-      "id": 6
-    },
-    {
-      "user": [
-        {
-          "email": "abinayasri@gmail.com",
-          "pword": "Abil@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "id": 3,
-          "name": "Potato",
-          "price": 20,
-          "quantity": 1,
-          "disabled": true,
-          "image": "assets/images/slide2.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "veg"
-        },
-        {
-          "id": 11,
-          "name": "Papaya",
-          "price": 37,
-          "quantity": 1,
-          "disabled": true,
-          "image": "assets/images/papaya-fruit-isolated.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "fruit"
-        },
-        {
-          "id": 14,
-          "name": "Blueberry",
-          "price": 89,
-          "quantity": 2,
-          "disabled": true,
-          "image": "assets/images/slide7.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "fruit"
-        }
-      ],
-      "id": 7
-    },
-    {
-      "user": [
-        {
-          "email": "sudharsan25252@gmail.com",
-          "pword": "Sudha@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "id": 3,
-          "name": "Potato",
-          "price": 20,
-          "quantity": 2,
-          "disabled": true,
-          "image": "assets/images/slide2.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "veg"
-        },
-        {
-          "name": "Cauliflower",
-          "price": "25",
-          "category": "veg",
-          "quantity": 2,
-          "description": "about the products",
-          "image": "assets/images/image1.webp",
-          "id": 2,
-          "disabled": true
-        },
-        {
-          "id": 1,
-          "name": "Tomato",
-          "price": "15",
-          "quantity": "1",
-          "disabled": false,
-          "description": "",
-          "image": "assets/images/tomatoes.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "veg"
-        }
-      ],
-      "id": 8
-    },
-    {
-      "user": [
-        {
-          "email": "hemalathanarayanan01@gmail.com",
-          "pword": "Hema@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "id": 3,
-          "name": "Potato",
-          "price": 20,
-          "quantity": 1,
-          "disabled": true,
-          "image": "assets/images/slide2.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "veg"
-        },
-        {
-          "name": "Cauliflower",
-          "price": "25",
-          "category": "veg",
-          "quantity": "1",
-          "description": "about the products",
-          "image": "assets/images/image1.webp",
-          "id": 2,
-          "disabled": true
-        }
-      ],
-      "id": 9
-    },
-    {
-      "user": [
-        {
-          "email": "hemalathanarayanan01@gmail.com",
-          "pword": "Hema@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "id": 3,
-          "name": "Potato",
-          "price": 20,
-          "quantity": 2,
-          "disabled": true,
-          "image": "assets/images/slide2.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "veg"
-        },
-        {
-          "name": "Cauliflower",
-          "price": "25",
-          "category": "veg",
-          "quantity": "1",
-          "description": "about the products",
-          "image": "assets/images/image1.webp",
-          "id": 2
-        }
-      ],
-      "id": 10
-    },
-    {
-      "user": [
-        {
-          "email": "sudharsan25252@gmail.com",
-          "pword": "Sudha@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "name": "Raddish",
-          "price": "25",
-          "category": "veg",
-          "quantity": 2,
-          "description": "about the product",
-          "image": "assets/images/image2.jpg",
-          "id": 4,
-          "disabled": true
-        },
-        {
-          "id": 6,
-          "name": "Lady's Finger",
-          "price": 53,
-          "quantity": 1,
-          "disabled": true,
-          "image": "assets/images/slide3.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "veg"
-        },
-        {
-          "id": 20,
-          "name": "Atta",
-          "price": 471,
-          "quantity": 1,
-          "disabled": true,
-          "image": "assets/images/wheat.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "grains"
-        }
-      ],
-      "id": 11
-    },
-    {
-      "user": [
-        {
-          "email": "priya@gmail.com",
-          "pword": "Priya@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "id": 17,
-          "name": "Cheese",
-          "price": 70,
-          "quantity": 2,
-          "disabled": true,
-          "image": "assets/images/cheddar-cheese-dark-wooden-surface.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "Dairy"
-        },
+      "emailId": "hemalathanarayanan01@gmail.com",
+      "total": 17.5,
+      "date": "Date: 08/02/2023 Time: 21:13",
+      "userstatus": "Pending",
+      "adminstatus": "Approved",
+      "review": "Not given",
+      "feedback": "Not given",
+      "Menu_details": [
         {
           "id": 16,
           "name": "Milk",
@@ -817,10 +506,23 @@
           "disabled": true,
           "image": "assets/images/fresh-milk-mug-jug-wooden-table.jpg",
           "detail": "about the product",
-          "weight": "1kg",
+          "weight": "ltr",
           "rating": 5,
-          "category": "Dairy"
-        },
+          "category": "Dairy",
+          "offerPrice": 17.5
+        }
+      ],
+      "id": 4
+    },
+    {
+      "emailId": "hemalathanarayanan01@gmail.com",
+      "total": 75,
+      "date": "Date: 08/02/2023 Time: 21:41",
+      "userstatus": "Cancelled",
+      "adminstatus": "Pending",
+      "review": "Less quantity",
+      "feedback": "Will look into that ..Thank you!",
+      "Menu_details": [
         {
           "id": 21,
           "name": "Peanut",
@@ -829,194 +531,249 @@
           "disabled": true,
           "image": "assets/images/peanut.jpg",
           "detail": "about the product",
-          "weight": "1kg",
+          "weight": "kg",
           "rating": 5,
-          "category": "grains"
-        },
+          "category": "grains",
+          "offerPrice": 75
+        }
+      ],
+      "id": 6
+    },
+    {
+      "emailId": "priya@gmail.com",
+      "total": 105,
+      "date": "Date: 08/02/2023 Time: 22:04",
+      "userstatus": "Pending",
+      "adminstatus": "Pending",
+      "review": "Good",
+      "feedback": "Thank You So much ",
+      "Menu_details": [
         {
-          "id": 19,
-          "name": "Rice",
+          "id": 17,
+          "name": "Cheese",
           "price": 70,
           "quantity": 2,
           "disabled": true,
-          "image": "assets/images/rice.jpg",
+          "image": "assets/images/cheddar-cheese-dark-wooden-surface.jpg",
           "detail": "about the product",
-          "weight": "1kg",
+          "weight": "g",
           "rating": 5,
-          "category": "grains"
+          "category": "Dairy",
+          "offerPrice": 35
+        },
+        {
+          "id": 7,
+          "name": "Carrot",
+          "price": 35,
+          "quantity": 2,
+          "disabled": true,
+          "image": "assets/images/slide5.jpg",
+          "detail": "about the product",
+          "weight": " kg",
+          "rating": 5,
+          "category": "veg",
+          "offerPrice": 17.5
+        }
+      ],
+      "id": 7
+    },
+    {
+      "emailId": "hemalathanarayanan01@gmail.com",
+      "total": 43.5,
+      "date": "Date: 08/12/2023 Time: 21:54",
+      "userstatus": "Cancelled",
+      "adminstatus": "Pending",
+      "review": "Not given",
+      "feedback": "Fresh papaya",
+      "Menu_details": [
+        {
+          "id": 11,
+          "name": "Papaya",
+          "price": 37,
+          "quantity": 1,
+          "disabled": false,
+          "image": "assets/images/papaya-fruit-isolated.jpg",
+          "detail": "about the product",
+          "weight": "kg",
+          "rating": 5,
+          "category": "fruit",
+          "offerPrice": 18.5
+        },
+        {
+          "name": "Cauliflower",
+          "price": "25",
+          "quantity": 2,
+          "disabled": "false",
+          "image": "assets/images/image1.webp",
+          "detail": "about the product",
+          "weight": " kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 2,
+          "offerPrice": 12.5
+        }
+      ],
+      "id": 8
+    },
+    {
+      "emailId": "hemalathanarayanan01@gmail.com",
+      "total": 12.5,
+      "date": "Date: 08/13/2023 Time: 20:49",
+      "userstatus": "Pending",
+      "adminstatus": "Pending",
+      "review": "Not given",
+      "feedback": "Not given",
+      "Menu_details": [
+        {
+          "name": "Raddish",
+          "price": "25",
+          "quantity": "1",
+          "disabled": true,
+          "image": "assets/images/image2.jpg",
+          "detail": "about the product",
+          "weight": " kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 4,
+          "offerPrice": 12.5
+        }
+      ],
+      "id": 9
+    },
+    {
+      "emailId": "hemalathanarayanan01@gmail.com",
+      "total": 60,
+      "date": "Date: 08/15/2023 Time: 22:15",
+      "userstatus": "Pending",
+      "adminstatus": "Pending",
+      "review": "Not given",
+      "feedback": "Not given",
+      "Menu_details": [
+        {
+          "name": "Tomato",
+          "price": "120",
+          "quantity": "1",
+          "disabled": "false",
+          "image": "assets/images/tomatoes.jpg",
+          "detail": "",
+          "weight": " kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 1,
+          "offerPrice": 60
+        }
+      ],
+      "id": 10
+    },
+    {
+      "emailId": "hemalathanarayanan01@gmail.com",
+      "total": 12.5,
+      "date": "Date: 08/16/2023 Time: 15:14",
+      "userstatus": "Pending",
+      "adminstatus": "Pending",
+      "review": "Not given",
+      "feedback": "Not given",
+      "Menu_details": [
+        {
+          "name": "Raddish",
+          "price": "25",
+          "quantity": "1",
+          "disabled": true,
+          "image": "assets/images/image2.jpg",
+          "detail": "about the product",
+          "weight": " kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 4,
+          "offerPrice": 12.5
+        }
+      ],
+      "id": 11
+    },
+    {
+      "emailId": "hemalathanarayanan01@gmail.com",
+      "total": 11,
+      "date": "Date: 08/16/2023 Time: 15:43",
+      "userstatus": "Pending",
+      "adminstatus": "Approved",
+      "review": "Not given",
+      "feedback": "Not given",
+      "Menu_details": [
+        {
+          "name": "Potato",
+          "price": 22,
+          "quantity": "1",
+          "disabled": "false",
+          "image": "assets/images/slide2.jpg",
+          "description": "",
+          "weight": " kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 3,
+          "offerPrice": 11
         }
       ],
       "id": 12
     },
     {
-      "user": [
+      "emailId": "hemalathanarayanan01@gmail.com",
+      "total": 11,
+      "date": "Date: 08/21/2023 Time: 15:02",
+      "userstatus": "Pending",
+      "adminstatus": "Pending",
+      "review": "Not given",
+      "feedback": "Not given",
+      "Menu_details": [
         {
-          "email": "shreya@gmail.com",
-          "pword": "Shreya@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "id": 11,
-          "name": "Papaya",
-          "price": 37,
-          "quantity": 2,
-          "disabled": true,
-          "image": "assets/images/papaya-fruit-isolated.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "fruit"
-        },
-        {
-          "name": "Pomegranate",
-          "price": "87",
-          "category": "fruit",
+          "name": "Potato",
+          "price": 22,
           "quantity": "1",
-          "description": "about the product",
-          "image": "assets/images/exotic-delicious-pomegranate-white-background.jpg",
-          "id": 12,
-          "disabled": true
-        },
-        {
-          "id": 13,
-          "name": "Orange",
-          "price": 48,
-          "quantity": 1,
-          "disabled": true,
-          "image": "assets/images/fresh-orange-isolated-white-back.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "fruit"
-        },
-        {
-          "id": 9,
-          "name": "Kiwi",
-          "price": 80,
-          "quantity": 2,
-          "disabled": true,
-          "image": "assets/images/fresh-kiwi-fruit-isolated.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "fruit"
+          "disabled": "false",
+          "image": "assets/images/slide2.jpg",
+          "description": "",
+          "weight": " kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 3,
+          "offerPrice": 11
         }
       ],
       "id": 13
     },
     {
-      "user": [
+      "emailId": "hemalathanarayanan01@gmail.com",
+      "total": 11,
+      "date": "Date: 08/28/2023 Time: 14:21",
+      "userstatus": "Pending",
+      "adminstatus": "Pending",
+      "review": "Not given",
+      "feedback": "Not given",
+      "Menu_details": [
         {
-          "email": "hemalathanarayanan01@gmail.com",
-          "pword": "Hema@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "id": 14,
-          "name": "Blueberry",
-          "price": 89,
-          "quantity": 1,
-          "disabled": true,
-          "image": "assets/images/slide7.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "fruit"
+          "name": "Potato",
+          "price": 22,
+          "quantity": "1",
+          "disabled": "false",
+          "image": "assets/images/slide2.jpg",
+          "description": "",
+          "weight": " kg",
+          "rating": "5",
+          "category": "veg",
+          "id": 3,
+          "offerPrice": 11
         }
       ],
       "id": 14
     },
     {
-      "user": [
-        {
-          "email": "hemalathanarayanan01@gmail.com",
-          "pword": "Hema@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "name": "Raddish",
-          "price": "25",
-          "quantity": "1",
-          "disabled": true,
-          "image": "assets/images/image2.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": "5",
-          "category": "veg",
-          "id": 4
-        }
-      ],
-      "id": 15
-    },
-    {
-      "user": [
-        {
-          "email": "sudharsan@gmail.com",
-          "pword": "Sudha@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "name": "Potato",
-          "price": "20",
-          "quantity": "1",
-          "disabled": true,
-          "image": "assets/images/slide2.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": "5",
-          "category": "veg",
-          "id": 3
-        }
-      ],
-      "id": 16
-    },
-    {
-      "user": [
-        {
-          "email": "hemalathanarayanan01@gmail.com",
-          "pword": "Hema@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "name": "Raddish",
-          "price": "25",
-          "quantity": "1",
-          "disabled": true,
-          "image": "assets/images/image2.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": "5",
-          "category": "veg",
-          "id": 4
-        }
-      ],
-      "id": 17
-    },
-    {
-      "user": [
-        {
-          "email": "hemalathanarayanan01@gmail.com",
-          "pword": "Hema@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
+      "emailId": "hemalathanarayanan01@gmail.com",
+      "total": 12.5,
+      "date": "Date: 09/03/2023 Time: 23:08",
+      "userstatus": "Pending",
+      "adminstatus": "Approved",
+      "review": "Not given",
+      "feedback": "Not given",
+      "Menu_details": [
         {
           "name": "Raddish",
           "price": "25",
@@ -1024,149 +781,34 @@
           "disabled": "false",
           "image": "assets/images/image2.jpg",
           "detail": "about the product",
-          "weight": "1kg",
+          "weight": " kg",
           "rating": "5",
           "category": "veg",
-          "id": 4
-        },
-        {
-          "name": "Potato",
-          "price": "20",
-          "quantity": "1",
-          "disabled": true,
-          "image": "assets/images/slide2.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": "5",
-          "category": "veg",
-          "id": 3
+          "id": 4,
+          "offerPrice": 12.5
         }
       ],
-      "id": 18
+      "id": 15
+    }
+  ],
+  "logDetail": [
+    {
+      "message": "Registered Successfully:null",
+      "level": "INFO",
+      "timestamp": "15/8/2023, 9:56:10 pm",
+      "id": 1
     },
     {
-      "user": [
-        {
-          "email": "sudharsan@gmail.com",
-          "pword": "Sudha@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "name": "Raddish",
-          "price": "25",
-          "quantity": 2,
-          "disabled": true,
-          "image": "assets/images/image2.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": "5",
-          "category": "veg",
-          "id": 4
-        },
-        {
-          "name": "Potato",
-          "price": "20",
-          "quantity": 3,
-          "disabled": true,
-          "image": "assets/images/slide2.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": "5",
-          "category": "veg",
-          "id": 3
-        }
-      ],
-      "id": 19
+      "message": "Registered Successfully:undefined",
+      "level": "INFO",
+      "timestamp": "15/8/2023, 10:07:46 pm",
+      "id": 2
     },
     {
-      "user": [
-        {
-          "email": "hemalathanarayanan01@gmail.com",
-          "pword": "Hema@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "name": "Potato",
-          "price": "20",
-          "quantity": 3,
-          "disabled": true,
-          "image": "assets/images/slide2.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": "5",
-          "category": "veg",
-          "id": 3
-        }
-      ],
-      "id": 20
-    },
-    {
-      "user": [
-        {
-          "email": "shadhvik@gmail.com",
-          "pword": "Shadhvik@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "id": 17,
-          "name": "Cheese",
-          "price": 70,
-          "quantity": 1,
-          "disabled": true,
-          "image": "assets/images/cheddar-cheese-dark-wooden-surface.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "Dairy"
-        },
-        {
-          "id": 16,
-          "name": "Milk",
-          "price": 35,
-          "quantity": 4,
-          "disabled": true,
-          "image": "assets/images/fresh-milk-mug-jug-wooden-table.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "Dairy"
-        }
-      ],
-      "id": 21
-    },
-    {
-      "user": [
-        {
-          "email": "hemalathanarayanan01@gmail.com",
-          "pword": "Hema@123",
-          "userType": "user",
-          "id": 1
-        }
-      ],
-      "items": [
-        {
-          "id": 12,
-          "name": "Pomegranate",
-          "price": 87,
-          "quantity": 2,
-          "disabled": true,
-          "image": "assets/images/exotic-delicious-pomegranate-white-background.jpg",
-          "detail": "about the product",
-          "weight": "1kg",
-          "rating": 5,
-          "category": "fruit"
-        }
-      ],
-      "id": 22
+      "message": "Registered Successfully:null",
+      "level": "INFO",
+      "timestamp": "16/8/2023, 3:47:18 pm",
+      "id": 3
     }
   ]
 }

@@ -18,11 +18,8 @@
   cursor: pointer;
   margin-bottom: 150px;
 }
-.error-p{
-  color: red;
-}
 
-.message-p{
+.message{
   color: green;
   text-align: center;
 }

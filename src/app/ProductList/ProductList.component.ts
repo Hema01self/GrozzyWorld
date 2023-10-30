@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 import { Product } from '../Product';
-import { AuthService } from '../auth.service';
-import { Observable } from 'rxjs';
 import {  Router } from '@angular/router';
 import { ProductApiService } from '../product-api.service';
 import { UserService } from '../user.service';
@@ -20,14 +18,16 @@ export class ProductListComponent implements OnInit {
   public totalItem: number = 0;
   public usercount:number=0;
   users:any=[];
+  // offer
+  offerPrice!: number;
+  cartItemCount: any;
 
 
   constructor(
     public cartService: CartService,
-    private authService: AuthService,
     private route: Router,
     private service: ProductApiService,
-    private userService:UserService
+    private userService:UserService,
   ) {
     this.cart = this.cartService.getItems();
     this.userService.getCurrentUser().subscribe(user=>this.users=user);
@@ -36,7 +36,13 @@ export class ProductListComponent implements OnInit {
     this.service.getProducts().subscribe((products) => {
       this.products = products;
       this.filterCategory = products;
+      // offer
+      this.products.forEach((product)=>{
+        this.calculateOfferPrice(product);
+      });
+      this.scheduleRevertToOriginalPrice();
     });
+    // offer
     this.cartService.getCartCount().subscribe((total) => {
       this.totalItem = total;
     });
@@ -47,25 +53,48 @@ export class ProductListComponent implements OnInit {
     if (storedUser) {
       this.user = JSON.parse(storedUser);
       this.usercount = 1;
-    }
 
     }
+
+
+    }
+    // offer
+    calculateOfferPrice(product: Product){
+       product.offerPrice = product.price*0.5 // 50% off
+    }
+    scheduleRevertToOriginalPrice() {
+      setTimeout(() => {
+        this.products.forEach((product)=>{
+          product.offerPrice=undefined;
+        });
+      }, 1800000); // Revert to original price after 30 minutes (30 minutes = 1800000 milliseconds)
+    }
+    // offer end
+
 
   addToCart(product: Product) {
     if (this.cartService.isProductInCart(product)) {
       window.alert('Product already added to cart');
-    } else{
+
+    }
+    else{
+      if(this.usercount===0){
+        this.route.navigate(['\login']);
+        localStorage.setItem('pendingCart',JSON.stringify(product));
+        console.log('pendingCart');
+      }
+      else{
       this.cartService.addToCart(product);
       window.alert('Added to cart');
       console.log(product);
       product.disabled = true;
-
+    }
        }
   }
   getGrandTotal() {
     let grandTotal = 0;
     this.cartService.getItems().forEach((item) => {
-      grandTotal += item.price * item.quantity;
+      grandTotal += item.price * item.quantity ;
     });
     return grandTotal;
   }
@@ -78,11 +107,11 @@ export class ProductListComponent implements OnInit {
     });
   }
 
-  alertUser() {
-    alert('Please login to add products');
-    this.route.navigate(['/login']);
-  }
+
+
+// 29.06
 
 
 
 }
+

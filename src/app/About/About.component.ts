@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-About',
   templateUrl: './About.component.html',
   styleUrls: ['./About.component.css']
 })
 export class AboutComponent implements OnInit {
+private count = environment.count;
 
   constructor() { }
 
   ngOnInit() {
   }
-  productcount:number=0;
+  productcount:number=this.count;
   productcountstop:any=setInterval(()=>{
     this.productcount++;
     if(this.productcount==900){
@@ -20,7 +21,7 @@ export class AboutComponent implements OnInit {
   },10)
 
 
-  clientcount:number=0;
+  clientcount:number=this.count;
   clientcountstop:any=setInterval(()=>{
     this.clientcount++;
     if(this.clientcount==500){
@@ -28,7 +29,7 @@ export class AboutComponent implements OnInit {
     }
   },10)
 
-  awardcount:number=0;
+  awardcount:number=this.count;
   awardcountstop:any=setInterval(()=>{
     this.awardcount++;
     if(this.awardcount==50){
@@ -36,7 +37,7 @@ export class AboutComponent implements OnInit {
     }
   },10)
 
-  staffcount:number=0;
+  staffcount:number=this.count;
   staffcountstop:any=setInterval(()=>{
     this.staffcount++;
     if(this.staffcount==100){

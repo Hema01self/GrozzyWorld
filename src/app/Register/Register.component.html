@@ -10,8 +10,7 @@
           <div *ngIf="loginForm1.controls['username'].dirty ">
 
             <small *ngIf="loginForm1.controls['username'].errors?.['required']">Please enter name</small>
-            <small *ngIf="loginForm1.controls['username'].errors?.['minLength']">Please enter 3 name</small>
-            <small *ngIf="loginForm1.controls['username'].errors?.['pattern']">Name consist of alphabets only & minimum length should be 2</small>
+            <small *ngIf="loginForm1.controls['username'].errors?.['pattern']">Name consist of alphabets only & minimum length should be 3</small>
 
           </div>
         </div>
@@ -38,7 +37,7 @@
           <input type="password" placeholder="Enter password" name="password" formControlName="password" [(ngModel)]="password">
           <div *ngIf="loginForm1.controls['password'].dirty">
             <small *ngIf="loginForm1.controls['password'].errors?.['required']">Please enter password</small>
-            <small *ngIf="loginForm1.controls['password'].errors?.['pattern']">Atleast 1-uppercase, lowercase, number, special character and minimum length should be 8</small>
+            <small *ngIf="loginForm1.controls['password'].errors?.['pattern']">Atleast 1-uppercase, lowercase, number and minimum length should be 8</small>
           </div>
         </div>
 

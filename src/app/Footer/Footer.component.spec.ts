@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { FooterComponent } from './Footer.component';
+import { FormsModule } from '@angular/forms';
 
 describe('FooterComponent', () => {
   let component: FooterComponent;
@@ -11,7 +12,8 @@ describe('FooterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FooterComponent ]
+      declarations: [ FooterComponent ],
+      imports:[FormsModule]
     })
     .compileComponents();
   }));

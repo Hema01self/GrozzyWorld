@@ -65,5 +65,17 @@
 
 
   </div>
+
 </div>
+
+<!--today 16.06-->
+
+<!-- Pop-Up Display About Quotes Ends here -->
 <app-Footer></app-Footer>
+
+<div id="popup" class="popup" style="display: none;">
+  <div style="text-align: right;"  (click)="closePopup()"><img src="assets/images/cancel.png" height="35px" width="35px"></div>
+
+  <p>Exclusive Offer only for 30 Minutes</p>
+  <button (click)="grab()">Grab Now</button>
+</div>

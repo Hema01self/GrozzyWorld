@@ -30,17 +30,40 @@ td{
 }
 .order-detail
 {
-
   padding:15px 40px;
 }
 .grid{
   display:grid;
 }
-.grid-three-columns{
+.grid-columns{
   grid-template-columns:repeat(5,1fr);
   padding-left: 50px;
   background-color: #e0e0e0;
 }
 h3{
   color:rgba(25, 2, 94, 0.644);
+}
+.cart-remove-button{
+  margin:10px 10px;
+
+  background: #b92b27;;
+  color:white;
+  border-radius: 5px;
+  padding:10px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+.cart-checkout-button
+{
+  margin:10px 10px;
+  background: #7bae37;
+  color:white;
+  border-radius: 5px;
+  padding:10px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
 }

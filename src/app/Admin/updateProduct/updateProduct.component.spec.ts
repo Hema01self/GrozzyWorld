@@ -4,6 +4,9 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { UpdateProductComponent } from './updateProduct.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AdminHomeComponent } from '../AdminHome/AdminHome.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('UpdateProductComponent', () => {
   let component: UpdateProductComponent;
@@ -11,7 +14,8 @@ describe('UpdateProductComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UpdateProductComponent ]
+      declarations: [ UpdateProductComponent,AdminHomeComponent ],
+      imports:[HttpClientModule,ReactiveFormsModule]
     })
     .compileComponents();
   }));

@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { AuthService } from './auth.service';
-import { Router } from '@angular/router';
-import { UserService } from './user.service';
-import { CartService } from './cart.service';
+
 
 @Component({
   selector: 'app-root',

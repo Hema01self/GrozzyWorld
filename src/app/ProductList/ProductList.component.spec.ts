@@ -4,6 +4,10 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { ProductListComponent } from './ProductList.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from '../Header/Header.component';
+import { FooterComponent } from '../Footer/Footer.component';
+import { FormsModule } from '@angular/forms';
 
 describe('ProductListComponent', () => {
   let component: ProductListComponent;
@@ -11,7 +15,8 @@ describe('ProductListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProductListComponent ]
+      declarations: [ ProductListComponent,HeaderComponent,FooterComponent ],
+      imports:[HttpClientModule,FormsModule]
     })
     .compileComponents();
   }));

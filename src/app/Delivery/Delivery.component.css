@@ -4,19 +4,15 @@
 .left-cont,.right-cont{
   width:50%;
   margin:15px;
-
 }
-
 .delivery-form{
   background-color: rgb(232, 229, 223);
   padding: 15px;
-
 }
 .fa-map-marker{
   padding-right: 5px;
   color:#0085ba;
 }
-
 .grid{
   display: flex;
 }
@@ -27,7 +23,7 @@ width: 420px;
 .fields{
 padding: 10px;
 }
-.grid-three-columns input
+.grid-columns input
 {
 width: 186px;
 
@@ -48,6 +44,7 @@ label{
   background-color: #0085ba;
   padding: 5px;
   border: none;
+  
 }
 /* .delivery-button:hover{
   color:#0085ba;
@@ -96,4 +93,15 @@ padding-top: 15px;}
 .payment-field input{
   width: 420px;
 
+  }
+
+  .cart-remove-button{
+    background: #b92b27;;
+    color:white;
+    border-radius: 5px;
+    padding:10px;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
   }

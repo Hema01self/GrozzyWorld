@@ -2,16 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, map, tap } from 'rxjs';
-import { User } from './User';
-import { UserService } from './user.service';
-
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   // private loggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-  private userUrl='http://localhost:3000/users';
-  private adminUrl='http://localhost:3000/admin';
+  private userUrl=environment.getUserDetail;
+  private adminUrl=environment.getAdminDetail;
 
 
 public loggedIn: BehaviorSubject<boolean> =new BehaviorSubject<boolean>(false);
@@ -24,7 +22,7 @@ public isLoggedIn$: Observable<boolean> = this.loggedIn.asObservable();
 
     return this.http.get<any[]>(dbUrl).pipe(
       tap((users) => {
-        const user = users.find((u) => u.email === username && u.pword === password);
+        const user = users.find((user) => user.email === username && user.pword === password);
 
         if (user) {
 
